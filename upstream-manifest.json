@@ -1,0 +1,112 @@
+{
+  "format": "rodova-pamet-upstream/1",
+  "skill": "rodova-pamet",
+  "version": "1.0.0",
+  "auditedAt": "2026-11-02",
+  "upstreams": [
+    {
+      "repository": "https://github.com/sarsonj/rodokmen-skill",
+      "branch": "main",
+      "commit": "2b657135f9dbe6843cc7515883252ad799fb40c9",
+      "tag": {
+        "name": "v0.6.0",
+        "sha": "dca88f0c067b813591c6e6133834e54897393b79",
+        "note": "The tag differs from the reviewed main HEAD."
+      },
+      "license": "MIT (excluding unlicensed playbook)",
+      "scope": {
+        "pull_requests": 25,
+        "open": 21,
+        "merged": 4,
+        "closed_unmerged": 0,
+        "branches": 1,
+        "tags": 1,
+        "issues_including_pr": 63,
+        "actual_issues": 38,
+        "repository_issue_comments": 15,
+        "inline_review_comments": 0,
+        "formal_review_objects": 1,
+        "formal_review_note": "PR #29 Copilot quota response; no substantive code review in this object.",
+        "total_diff_bytes": 675107,
+        "changed_path_occurrences": 203,
+        "completeness": "GitHub REST state=all inventories with per_page=100 and no next Link; all PR head refs fetched and full git merge-base diffs saved."
+      },
+      "pagination": {
+        "pulls": [
+          {
+            "url": "https://api.github.com/repos/sarsonj/rodokmen-skill/pulls?state=all&per_page=100&page=1",
+            "count": 25,
+            "link": ""
+          }
+        ],
+        "branches": [
+          {
+            "url": "https://api.github.com/repos/sarsonj/rodokmen-skill/branches?per_page=100&page=1",
+            "count": 1,
+            "link": ""
+          }
+        ],
+        "tags": [
+          {
+            "url": "https://api.github.com/repos/sarsonj/rodokmen-skill/tags?per_page=100&page=1",
+            "count": 1,
+            "link": ""
+          }
+        ],
+        "issues": [
+          {
+            "url": "https://api.github.com/repos/sarsonj/rodokmen-skill/issues?state=all&per_page=100&page=1",
+            "count": 63,
+            "link": ""
+          }
+        ]
+      }
+    },
+    {
+      "repository": "https://github.com/thejanhromek/pamet-rodu",
+      "branch": "main",
+      "commit": "d40b6512efb247859773f4cd4e273a1299d26f22",
+      "license": "MIT plus vendored third-party licenses",
+      "pullRequests": {
+        "total": 0,
+        "open": 0,
+        "merged": 0,
+        "closedUnmerged": 0
+      },
+      "trackedFiles": 160,
+      "historyCommits": 11
+    }
+  ],
+  "dataPolicy": "No private family data bundled. Fictional examples have meta.sample=true. Imported per-person doc never automatically verifies individual claims.",
+  "references": {
+    "pullRequests": "references/pr-inventory.json",
+    "archiveFiles": "assets/archivy/PROVENANCE.json",
+    "applicationAudit": "references/pamet-inventory.json",
+    "licenses": "THIRD-PARTY-NOTICES.md",
+    "applicationFiles": "references/kronika-files.json"
+  },
+  "excluded": [
+    "Unlicensed rodokmen reference/playbook.md",
+    "Original Astro runtime and conflicting second data model",
+    "Automatic network scans, token emulation and changes to client permissions",
+    "Private user family records"
+  ],
+  "validation": {
+    "corePythonRegressionTests": 10,
+    "archiveRegressionTests": 14,
+    "rateLimiterCases": 24,
+    "rateLimiterDetail": "23 in one run, remaining local fixture passed separately after loopback proxy correction",
+    "applicationTestFiles": 28,
+    "declaredApplicationScenarios": 156,
+    "migration": "7 people,6 relations,22 claims,9 source cards;44 original/supporting files SHA256 matched; no imported claim promoted to verified",
+    "browserVisualQA": "Not completed: local browser blocked; escalated Playwright /opt/codex read rejected by automatic approval review. No bypass attempted.",
+    "liveArchives": "No blanket live portal verification; validate a needed record at time of use.",
+    "gedcomIntegration": "CLI import -> candidates/changes/original bytes+AST -> CLI dry-run apply passed; 6 people and 4 parent-child relationships; no canonical dataset write",
+    "applicationFilesManifest": {
+      "files": 131,
+      "bytes": 5356810,
+      "modified": 33,
+      "added": 8
+    }
+  }
+}

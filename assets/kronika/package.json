@@ -1,0 +1,18 @@
+{
+  "name": "pamet-rodu",
+  "private": true,
+  "description": "Offline rodová kronika v jednom HTML souboru – šablona pro vlastní genealogický výzkum.",
+  "license": "MIT",
+  "scripts": {
+    "init": "node scripts/init.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.cjs tests/*.test.mjs",
+    "protect": "node scripts/protect.mjs",
+    "book": "node scripts/build-book.mjs",
+    "audiobook": "node scripts/build-audiobook.mjs",
+    "test:visual": "node scripts/visual-test.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

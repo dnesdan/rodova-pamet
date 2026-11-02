@@ -1,0 +1,1184 @@
+{
+  "repository": "https://github.com/sarsonj/rodokmen-skill",
+  "reviewedAt": "2026-11-02",
+  "scope": {
+    "pull_requests": 25,
+    "open": 21,
+    "merged": 4,
+    "closed_unmerged": 0,
+    "branches": 1,
+    "tags": 1,
+    "issues_including_pr": 63,
+    "actual_issues": 38,
+    "repository_issue_comments": 15,
+    "inline_review_comments": 0,
+    "formal_review_objects": 1,
+    "formal_review_note": "PR #29 Copilot quota response; no substantive code review in this object.",
+    "total_diff_bytes": 675107,
+    "changed_path_occurrences": 203,
+    "completeness": "GitHub REST state=all inventories with per_page=100 and no next Link; all PR head refs fetched and full git merge-base diffs saved."
+  },
+  "pullRequests": [
+    {
+      "number": 2,
+      "title": "Windows, nástroje pro SOA Plzeň a SOA Praha, záloha z MyHeritage",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/2",
+      "state": "merged",
+      "author": "svamberk",
+      "head_sha": "fc94b43e17b3008373683111b0dda6542b4b8b01",
+      "base_sha": "a2e9cb4926a12cf82e5899301008aca4bc84bda8",
+      "merge_base": "a2e9cb4926a12cf82e5899301008aca4bc84bda8",
+      "changed_paths": [
+        "README.md",
+        "skills/rodokmen/SKILL.md",
+        "skills/rodokmen/reference/matriky.md",
+        "skills/rodokmen/reference/portaly.md",
+        "skills/rodokmen/reference/web.md",
+        "skills/rodokmen/template/.gitignore",
+        "skills/rodokmen/template/web/package.json",
+        "skills/rodokmen/template/web/scripts/data.mjs",
+        "skills/rodokmen/tools/ahmp_search.sh",
+        "skills/rodokmen/tools/aron_img.py",
+        "skills/rodokmen/tools/ebadatelna.py",
+        "skills/rodokmen/tools/export_web.py",
+        "skills/rodokmen/tools/fan_chart.py",
+        "skills/rodokmen/tools/ftb_export.py",
+        "skills/rodokmen/tools/ged_import.py",
+        "skills/rodokmen/tools/matricula_batch.sh",
+        "skills/rodokmen/tools/portafontium.py",
+        "skills/rodokmen/tools/soal_zoomify.py",
+        "skills/rodokmen/tools/vyrez.py"
+      ],
+      "diff_bytes": 81756,
+      "reviewed": [
+        "metadata",
+        "body",
+        "complete git diff",
+        "available issue comments",
+        "available reviews"
+      ],
+      "disposition": "already-in-main",
+      "decision": "Windows/UTF-8, Porta fontium, eBadatelna, FTB a základní opravy bezpečného zápisu již patří do main; archivní části zachovány a upraveny. Astro šablona nepřevzata.",
+      "archive_outputs": [
+        "tools/portafontium.py",
+        "tools/ebadatelna.py",
+        "tools/ftb_export.py",
+        "tools/ahmp_search.sh"
+      ],
+      "integration_decision": "Windows/UTF-8, Porta fontium, eBadatelna, FTB a základní opravy bezpečného zápisu již patří do main; archivní části zachovány a upraveny. Astro šablona nepřevzata."
+    },
+    {
+      "number": 7,
+      "title": "ftb_export: žádné odkazy na smazané osoby (fix #4)",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/7",
+      "state": "merged",
+      "author": "sarsonj",
+      "head_sha": "46322e38650cec733b6401cc129e8468909ef863",
+      "base_sha": "d571ae7d275293af59b38b0a5028947792bd076c",
+      "merge_base": "d571ae7d275293af59b38b0a5028947792bd076c",
+      "changed_paths": [
+        "skills/rodokmen/tools/ftb_export.py"
+      ],
+      "diff_bytes": 731,
+      "reviewed": [
+        "metadata",
+        "body",
+        "complete git diff",
+        "available issue comments",
+        "available reviews"
+      ],
+      "disposition": "already-in-main",
+      "decision": "FTB odkazy na odstraněné osoby jsou opravené v main; zachováno. Nový provenance sidecar navíc uchovává zdrojové citace a stránky.",
+      "archive_outputs": [
+        "tools/ftb_export.py",
+        "reference/import-ftb.md"
+      ],
+      "integration_decision": "FTB odkazy na odstraněné osoby jsou opravené v main; zachováno. Nový provenance sidecar navíc uchovává zdrojové citace a stránky."
+    },
+    {
+      "number": 8,
+      "title": "Porta fontium: správný odkaz ke snímku, kontrola výřezu, ohled na server (fix #5)",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/8",
+      "state": "merged",
+      "author": "sarsonj",
+      "head_sha": "47194efb188858052a4eb42ebb81a1ccf4c6ffbc",
+      "base_sha": "d571ae7d275293af59b38b0a5028947792bd076c",
+      "merge_base": "d571ae7d275293af59b38b0a5028947792bd076c",
+      "changed_paths": [
+        "skills/rodokmen/tools/ebadatelna.py",
+        "skills/rodokmen/tools/portafontium.py"
+      ],
+      "diff_bytes": 6207,
+      "reviewed": [
+        "metadata",
+        "body",
+        "complete git diff",
+        "available issue comments",
+        "available reviews"
+      ],
+      "disposition": "already-in-main",
+      "decision": "Správné párování snímků/permalinků Porta fontium a kontrola výřezů zachovány. Centrální stopka má přednost před starší automatickou opakovací logikou pro 429/503.",
+      "archive_outputs": [
+        "tools/portafontium.py"
+      ],
+      "integration_decision": "Správné párování snímků/permalinků Porta fontium a kontrola výřezů zachovány. Centrální stopka má přednost před starší automatickou opakovací logikou pro 429/503."
+    },
+    {
+      "number": 10,
+      "title": "Aktualizace projektu: přepsat změněné šablony webu se zálohou (fix #9)",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/10",
+      "state": "merged",
+      "author": "sarsonj",
+      "head_sha": "5e2f380055b089d57186a8d8bb067cbd8b990b37",
+      "base_sha": "d571ae7d275293af59b38b0a5028947792bd076c",
+      "merge_base": "d571ae7d275293af59b38b0a5028947792bd076c",
+      "changed_paths": [
+        "CLAUDE.md",
+        "README.md",
+        "skills/rodokmen/SKILL.md",
+        "skills/rodokmen/VERZE",
+        "skills/rodokmen/reference/web.md",
+        "skills/rodokmen/tools/export_web.py",
+        "skills/rodokmen/tools/novy_projekt.py"
+      ],
+      "diff_bytes": 9237,
+      "reviewed": [
+        "metadata",
+        "body",
+        "complete git diff",
+        "available issue comments",
+        "available reviews"
+      ],
+      "disposition": "alternative",
+      "decision": "Princip zálohy a rozlišování dat od šablony je užitečný. Aktualizátor původní Astro aplikace není kompatibilní s canonical aplikací Paměti rodu, proto není kopírován.",
+      "archive_outputs": [],
+      "integration_decision": "Převzat princip zálohy a oddělení dat; nový inicializátor odmítá přepsání a transakční koordinátor uchovává stav před/po. Starý Astro updater není kompatibilní."
+    },
+    {
+      "number": 13,
+      "title": "Stromový graf celé rodiny s rozbalováním větví a sourozenci",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/13",
+      "state": "open",
+      "author": "iahoeu",
+      "head_sha": "c1fd6d6315952ee3119d9ac4e23b7e857b810ab9",
+      "base_sha": "08bea0bc2105fdb7f33ba6348573d21cc2bea4e0",
+      "merge_base": "08bea0bc2105fdb7f33ba6348573d21cc2bea4e0",
+      "changed_paths": [
+        "skills/rodokmen/SKILL.md",
+        "skills/rodokmen/reference/data.md",
+        "skills/rodokmen/reference/pribehy.md",
+        "skills/rodokmen/template/data/osoby.py",
+        "skills/rodokmen/template/ukazka/osoby.py",
+        "skills/rodokmen/template/web/src/layouts/Base.astro",
+        "skills/rodokmen/template/web/src/lib/data.js",
+        "skills/rodokmen/template/web/src/pages/osoba/[slug].astro",
+        "skills/rodokmen/template/web/src/pages/rodina/[id].astro",
+        "skills/rodokmen/template/web/src/pages/strom.astro",
+        "skills/rodokmen/template/web/src/styles/global.css",
+        "skills/rodokmen/tools/export_web.py",
+        "skills/rodokmen/tools/kontrola.py"
+      ],
+      "diff_bytes": 49907,
+      "reviewed": [
+        "metadata",
+        "body",
+        "complete git diff",
+        "available issue comments",
+        "available reviews"
+      ],
+      "disposition": "alternative",
+      "decision": "Boční větve, sourozenci, potomci a více vztahů řeší canonical offline aplikace. Původní RODINA/osoby.py a Astro /strom nejsou přidány jako druhý datový model. PR #20 mění stejnou oblast jinak.",
+      "archive_outputs": [],
+      "integration_decision": "Celý graf rodiny, sourozence, více partnerství a oddělené komponenty řeší převzatý full-tree modul Paměti rodu. Alternativní osoby.py/RODINA se nezavádí."
+    },
+    {
+      "number": 19,
+      "title": "Stránky Statistiky a Domy, volitelné původní tvary jmen",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/19",
+      "state": "open",
+      "author": "barasoukup",
+      "head_sha": "4f83225d0b0e3ce0047523a7a028fe1ba657b732",
+      "base_sha": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "merge_base": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "changed_paths": [
+        "skills/rodokmen/SKILL.md",
+        "skills/rodokmen/reference/data.md",
+        "skills/rodokmen/reference/matriky.md",
+        "skills/rodokmen/reference/web.md",
+        "skills/rodokmen/template/web/.gitignore",
+        "skills/rodokmen/template/web/src/layouts/Base.astro",
+        "skills/rodokmen/template/web/src/pages/domy.astro",
+        "skills/rodokmen/template/web/src/pages/mapa.astro",
+        "skills/rodokmen/template/web/src/pages/osoba/[slug].astro",
+        "skills/rodokmen/template/web/src/pages/statistiky.astro",
+        "skills/rodokmen/template/web/src/pages/zdroj/[key].astro",
+        "skills/rodokmen/template/web/src/styles/global.css",
+        "skills/rodokmen/tools/domy_export.py",
+        "skills/rodokmen/tools/export_web.py",
+        "skills/rodokmen/tools/fan_chart.py",
+        "skills/rodokmen/tools/statistiky.py"
+      ],
+      "diff_bytes": 71814,
+      "reviewed": [
+        "metadata",
+        "body",
+        "complete git diff",
+        "available issue comments",
+        "available reviews"
+      ],
+      "disposition": "knowledge-only",
+      "decision": "Statistiky, původní podoby jmen a mapa domů jsou vhodné náměty; odlišujeme unikátní osoby od pozic a dům od parcely. Astro stránka, heuristické odhady rolí a mapová integrace vyžadující další projekt/data nejsou kopírovány.",
+      "archive_outputs": [
+        "reference/prameny-a-pribehy.md"
+      ],
+      "integration_decision": "Převzaty znalosti o statistikách, původních jménech a historii domů. Statistiky/místopis existují v aplikaci; samostatná Astro stránka Domy a její odhadové párování nejsou převedeny."
+    },
+    {
+      "number": 20,
+      "title": "Návrh: stránka „Strom předků“ vedle vějíře",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/20",
+      "state": "open",
+      "author": "oskar-stierand",
+      "head_sha": "7a950b885c83aa6a57a56c9bd82f65bf64fc81b2",
+      "base_sha": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "merge_base": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "changed_paths": [
+        "skills/rodokmen/template/web/src/layouts/Base.astro",
+        "skills/rodokmen/template/web/src/pages/strom.astro"
+      ],
+      "diff_bytes": 7138,
+      "reviewed": [
+        "metadata",
+        "body",
+        "complete git diff",
+        "available issue comments",
+        "available reviews"
+      ],
+      "disposition": "alternative",
+      "decision": "Interaktivní rozbalovací strom má alternativu v canonical offline full-tree. Nekombinujeme konfliktní implementace /strom z #13 a #20.",
+      "archive_outputs": [],
+      "integration_decision": "Alternativou je přibalený vývod a celý graf; konflikt s #13 vyřešen jednou databází. Přidán samostatný SVG vějíř."
+    },
+    {
+      "number": 22,
+      "title": "ARON: odkaz na snímek otevře správný snímek, ne první (#18)",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/22",
+      "state": "open",
+      "author": "dplachetka",
+      "head_sha": "ee0a24059fc40453d99fb6ddbb54791a904a7271",
+      "base_sha": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "merge_base": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "changed_paths": [
+        "skills/rodokmen/SKILL.md",
+        "skills/rodokmen/reference/portaly.md",
+        "skills/rodokmen/tools/aron_img.py"
+      ],
+      "diff_bytes": 7832,
+      "reviewed": [
+        "metadata",
+        "body",
+        "complete git diff",
+        "available issue comments",
+        "available reviews"
+      ],
+      "disposition": "adapted",
+      "decision": "ARON odkaz vybírá TILE identifikátor ve správném DAO. Ručně sladěno s main, #29 a #60; chybějící či nejednoznačný TILE odmítá. Starý hromadný přepis osoby.py/svazky.json nebyl přidán.",
+      "archive_outputs": [
+        "tools/aron_img.py",
+        "tests/test_archive.py"
+      ],
+      "integration_decision": "ARON odkaz vybírá TILE identifikátor ve správném DAO. Ručně sladěno s main, #29 a #60; chybějící či nejednoznačný TILE odmítá. Starý hromadný přepis osoby.py/svazky.json nebyl přidán."
+    },
+    {
+      "number": 23,
+      "title": "Významné osobnosti rodokmenu",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/23",
+      "state": "open",
+      "author": "oskar-stierand",
+      "head_sha": "afd4d2041da5498735df641107f31a62a094256b",
+      "base_sha": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "merge_base": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "changed_paths": [
+        "skills/rodokmen/SKILL.md",
+        "skills/rodokmen/reference/data.md",
+        "skills/rodokmen/template/web/src/layouts/Base.astro",
+        "skills/rodokmen/template/web/src/pages/osobnosti.astro",
+        "skills/rodokmen/tools/export_web.py",
+        "skills/rodokmen/tools/osobnosti.py"
+      ],
+      "diff_bytes": 13104,
+      "reviewed": [
+        "metadata",
+        "body",
+        "complete git diff",
+        "available issue comments",
+        "available reviews"
+      ],
+      "disposition": "knowledge-only",
+      "decision": "Biografické směry a sekundární zdroje jsou užitečné; automatické prohlášení osobnosti podle titulu/role není důkaz. Původní osobnosti.py a Astro stránka nejsou přidány.",
+      "archive_outputs": [
+        "reference/prameny-a-pribehy.md"
+      ],
+      "integration_decision": "Biografické směry a pramenné zásady zachovány. Automatický seznam významných osobností podle titulů se nepoužívá; samostatná původní stránka nepřevedena."
+    },
+    {
+      "number": 26,
+      "title": "SKILL.md: popis v uvozovkách, aby se skill načetl i v GitHub Copilot",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/26",
+      "state": "open",
+      "author": "vlapacek",
+      "head_sha": "83e82dbd9d5f11d15feabefeb6e2a1211270c606",
+      "base_sha": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "merge_base": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "changed_paths": [
+        "skills/rodokmen/SKILL.md"
+      ],
+      "diff_bytes": 1287,
+      "reviewed": [
+        "metadata",
+        "body",
+        "complete git diff",
+        "available issue comments",
+        "available reviews"
+      ],
+      "disposition": "superseded",
+      "decision": "Escapování dvojtečky v YAML description řeší nové validované frontmatter. Stejný problém řeší #59; nejde o dvě funkce k přidání.",
+      "archive_outputs": [],
+      "integration_decision": "Nový frontmatter má citovaný description a prošel oficiálním validátorem skillů; stejný problém jako #59."
+    },
+    {
+      "number": 28,
+      "title": "Tři doplňující skilly: vedení čtenářů, vedlejší nálezy, evangelické a moravské matriky",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/28",
+      "state": "open",
+      "author": "Wiruss38",
+      "head_sha": "aa8cfdf92e63f39b49e06946e49f4e1dcadb8d7d",
+      "base_sha": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "merge_base": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "changed_paths": [
+        "skills/matriky-nekatolici-a-moravske-archivy/SKILL.md",
+        "skills/rodokmen-orchestrace/SKILL.md",
+        "skills/rodokmen-vedlejsi-nalezy/SKILL.md"
+      ],
+      "diff_bytes": 9754,
+      "reviewed": [
+        "metadata",
+        "body",
+        "complete git diff",
+        "available issue comments",
+        "available reviews"
+      ],
+      "disposition": "adapted-method",
+      "decision": "Převzaty principy malých dávek čtení, vedlejších stop a nekatolických pramenů. Odmítnuto souběžné stahování 6–8 pomocníky z jednoho archivu a neověřené univerzální sliby přesnosti/úspor.",
+      "archive_outputs": [
+        "reference/metodika.md"
+      ],
+      "integration_decision": "Převzaty principy malých dávek čtení, vedlejších stop a nekatolických pramenů. Odmítnuto souběžné stahování 6–8 pomocníky z jednoho archivu a neověřené univerzální sliby přesnosti/úspor."
+    },
+    {
+      "number": 29,
+      "title": "Verze 0.8.0: nové archivy (Brno, Litoměřice, židovské matriky), vězni a oběti 2. světové války, smoke test",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/29",
+      "state": "open",
+      "author": "srameko",
+      "head_sha": "00ced9b1a33c532c87b83ee3b38ce58431948e4c",
+      "base_sha": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "merge_base": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "changed_paths": [
+        ".claude-plugin/plugin.json",
+        "README.md",
+        "skills/rodokmen/SKILL.md",
+        "skills/rodokmen/VERZE",
+        "skills/rodokmen/reference/matriky.md",
+        "skills/rodokmen/reference/portaly.md",
+        "skills/rodokmen/reference/soukromi.md",
+        "skills/rodokmen/template/data/archivni_dotazy.md",
+        "skills/rodokmen/tools/ahmp_scan.py",
+        "skills/rodokmen/tools/arolsen.py",
+        "skills/rodokmen/tools/aron_img.py",
+        "skills/rodokmen/tools/brno_encyklopedie.py",
+        "skills/rodokmen/tools/ebadatelna.py",
+        "skills/rodokmen/tools/export_web.py",
+        "skills/rodokmen/tools/kramerius.py",
+        "skills/rodokmen/tools/litomerice.py",
+        "skills/rodokmen/tools/matricula.py",
+        "skills/rodokmen/tools/matricula_snimek.js",
+        "skills/rodokmen/tools/mauthausen.py",
+        "skills/rodokmen/tools/mza.py",
+        "skills/rodokmen/tools/novy_projekt.py",
+        "skills/rodokmen/tools/obeti.py",
+        "skills/rodokmen/tools/obraz.py",
+        "skills/rodokmen/tools/overit.py",
+        "skills/rodokmen/tools/ramecek.py",
+        "skills/rodokmen/tools/smoke_test.py",
+        "skills/rodokmen/tools/soal_zoomify.py",
+        "skills/rodokmen/tools/trebon.py",
+        "skills/rodokmen/tools/vademecum.py",
+        "skills/rodokmen/tools/vezni.py",
+        "skills/rodokmen/tools/vyrez.py"
+      ],
+      "diff_bytes": 162296,
+      "reviewed": [
+        "metadata",
+        "body",
+        "complete git diff",
+        "available issue comments",
+        "available reviews"
+      ],
+      "disposition": "adapted-subset",
+      "decision": "Přidány MZA, Litoměřice, VadeMeCum NA, Matricula, Brno, Arolsen, Terezín, Mauthausen a Holocaust.cz, sdílené obrazové funkce. Všechny nové síťové adaptéry doplněny společnou brzdou, protože větev vznikla před ní. Vynechány vlastní Astro/data změny, automatický síťový smoke test a obcházení browserových pravidel.",
+      "archive_outputs": [
+        "tools/mza.py",
+        "tools/litomerice.py",
+        "tools/vademecum.py",
+        "tools/matricula.py",
+        "tools/matricula_snimek.cjs",
+        "tools/brno_encyklopedie.py",
+        "tools/arolsen.py",
+        "tools/vezni.py",
+        "tools/mauthausen.py",
+        "tools/obeti.py",
+        "tools/obraz.py",
+        "tools/soal_zoomify.py",
+        "tools/kramerius.py"
+      ],
+      "integration_decision": "Přidány MZA, Litoměřice, VadeMeCum NA, Matricula, Brno, Arolsen, Terezín, Mauthausen a Holocaust.cz, sdílené obrazové funkce. Všechny nové síťové adaptéry doplněny společnou brzdou, protože větev vznikla před ní. Vynechány vlastní Astro/data změny, automatický síťový smoke test a obcházení browserových pravidel."
+    },
+    {
+      "number": 41,
+      "title": "Vylepšení z praxe: čas aktualizace na webu, Node 22.12, web ve vnitřn…",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/41",
+      "state": "open",
+      "author": "chalu72",
+      "head_sha": "e4ccaf08e1ac5363bf0311783d598f554b35403e",
+      "base_sha": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "merge_base": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "changed_paths": [
+        "skills/rodokmen/SKILL.md",
+        "skills/rodokmen/reference/matriky.md",
+        "skills/rodokmen/reference/portaly.md",
+        "skills/rodokmen/reference/web.md",
+        "skills/rodokmen/template/web/src/layouts/Base.astro",
+        "skills/rodokmen/template/web/src/pages/index.astro",
+        "skills/rodokmen/template/web/src/styles/global.css",
+        "skills/rodokmen/tools/export_web.py"
+      ],
+      "diff_bytes": 10873,
+      "reviewed": [
+        "metadata",
+        "body",
+        "complete git diff",
+        "available issue comments",
+        "available reviews"
+      ],
+      "disposition": "knowledge-only",
+      "decision": "Zachovány podněty k datování výstupů, zaniklým obcím a MZA. MZA řeší adaptér #29. Node/Astro upgrade a LAN server se netýkají nové aplikace; LAN přístup není autentizace.",
+      "archive_outputs": [
+        "reference/portaly.md",
+        "reference/prameny-a-pribehy.md"
+      ],
+      "integration_decision": "Zkušenosti s MZA, zaniklými místy a datováním výstupů zachovány. Nový projekt používá Node22+, verze a changelog; původní LAN/Astro deployment není přenesen."
+    },
+    {
+      "number": 42,
+      "title": "Podpora Codexu a OMP",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/42",
+      "state": "open",
+      "author": "xsigik",
+      "head_sha": "010f94a7e00f5d511cd70e473b9dafa4efe5ae91",
+      "base_sha": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "merge_base": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "changed_paths": [
+        ".claude-plugin/marketplace.json",
+        ".claude-plugin/plugin.json",
+        "AGENTS.md",
+        "CLAUDE.md",
+        "README.md",
+        "skills/rodokmen/SKILL.md",
+        "skills/rodokmen/VERZE",
+        "skills/rodokmen/reference/matriky.md",
+        "skills/rodokmen/reference/portaly.md",
+        "skills/rodokmen/template/AGENTS.md",
+        "skills/rodokmen/tools/ahmp_scan.py",
+        "skills/rodokmen/tools/aron_img.py",
+        "skills/rodokmen/tools/novy_projekt.py",
+        "skills/rodokmen/tools/overit.py",
+        "skills/rodokmen/tools/ramecek.py",
+        "skills/rodokmen/tools/soal_zoomify.py",
+        "skills/rodokmen/tools/trebon.py",
+        "skills/rodokmen/tools/vyrez.py"
+      ],
+      "diff_bytes": 31830,
+      "reviewed": [
+        "metadata",
+        "body",
+        "complete git diff",
+        "available issue comments",
+        "available reviews"
+      ],
+      "disposition": "alternative",
+      "decision": "Nový skill používá přenosné instrukce, ne pouze Claude. Automatické přepisování klientských nastavení, obcházení schvalování a vynucení levného modelu nepřidáno; různá prostředí mají vlastní pravidla.",
+      "archive_outputs": [],
+      "integration_decision": "Přenosný SKILL a projektové AGENTS s tenkým CLAUDE odkazem. Oprávnění hostitele ani model se automaticky nemění."
+    },
+    {
+      "number": 46,
+      "title": "Zpřesnit předávání výzkumu a práci s GEDCOM",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/46",
+      "state": "open",
+      "author": "vlapacek",
+      "head_sha": "f119395502ce645113b6aa1fe5d8fcb69a414d9d",
+      "base_sha": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "merge_base": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "changed_paths": [
+        "skills/rodokmen/SKILL.md",
+        "skills/rodokmen/reference/data.md",
+        "skills/rodokmen/reference/matriky.md",
+        "skills/rodokmen/tests/test_ged_import.py",
+        "skills/rodokmen/tests/test_kontrola.py",
+        "skills/rodokmen/tools/ged_import.py",
+        "skills/rodokmen/tools/kontrola.py"
+      ],
+      "diff_bytes": 14785,
+      "reviewed": [
+        "metadata",
+        "body",
+        "complete git diff",
+        "available issue comments",
+        "available reviews"
+      ],
+      "disposition": "adapted-method",
+      "decision": "Důsledné oddělení přepisu a shrnutí, zákaz falešných originálů a oddělené rodiny převzaty do metodiky. Opravy původního GEDCOM/osoby.py/číslovaného exportu se neaplikují na nový datový model; slouží jako regresní požadavky pro migraci.",
+      "archive_outputs": [
+        "reference/metodika.md",
+        "reference/import-ftb.md"
+      ],
+      "integration_decision": "Oddělený přepis/interpretace, skutečný obraz, předání stavu, bezpečný AST import a revize GEDCOM; neprověřený import není důkaz."
+    },
+    {
+      "number": 47,
+      "title": "Zpřesnit pokyny pro archivy a hlásit opakované pokusy eBadatelny",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/47",
+      "state": "open",
+      "author": "vlapacek",
+      "head_sha": "82223f291b63a9381196028d1200295520e9a5b9",
+      "base_sha": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "merge_base": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "changed_paths": [
+        "skills/rodokmen/SKILL.md",
+        "skills/rodokmen/reference/portaly.md",
+        "skills/rodokmen/template/.gitignore",
+        "skills/rodokmen/tests/test_ebadatelna.py",
+        "skills/rodokmen/tools/ebadatelna.py"
+      ],
+      "diff_bytes": 11692,
+      "reviewed": [
+        "metadata",
+        "body",
+        "complete git diff",
+        "available issue comments",
+        "available reviews"
+      ],
+      "disposition": "adapted",
+      "decision": "eBadatelna dostala srozumitelné chyby a cílené testy. Timeout/500 lze opakovat, 403/429/503 musí respektovat centrální stopku. Opavské URL se berou ze skutečného záznamu, žádné hádání. Staré tvrzení, že MZA nemá nástroj, nahrazeno novým adaptérem.",
+      "archive_outputs": [
+        "tools/ebadatelna.py",
+        "tests/test_ebadatelna.py",
+        "reference/portaly.md"
+      ],
+      "integration_decision": "eBadatelna dostala srozumitelné chyby a cílené testy. Timeout/500 lze opakovat, 403/429/503 musí respektovat centrální stopku. Opavské URL se berou ze skutečného záznamu, žádné hádání. Staré tvrzení, že MZA nemá nástroj, nahrazeno novým adaptérem."
+    },
+    {
+      "number": 48,
+      "title": "Fix Třeboň image tile stitching",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/48",
+      "state": "open",
+      "author": "vlapacek",
+      "head_sha": "b877a586f249b6aee495aaa22f05b2e2857df7a1",
+      "base_sha": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "merge_base": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "changed_paths": [
+        "skills/rodokmen/reference/matriky.md",
+        "skills/rodokmen/reference/portaly.md",
+        "skills/rodokmen/tests/test_trebon.py",
+        "skills/rodokmen/tools/trebon.py"
+      ],
+      "diff_bytes": 11105,
+      "reviewed": [
+        "metadata",
+        "body",
+        "complete git diff",
+        "available issue comments",
+        "available reviews"
+      ],
+      "disposition": "adapted",
+      "decision": "Třeboň skládá nestejně velké krajní dlaždice vlevo nahoru bez vnitřních mezer; spojeno s cache #60. Prázdný rejstřík se nehlásí jako prokázané nenalezení. Zachován skutečný obrazový test 7×5.",
+      "archive_outputs": [
+        "tools/trebon.py",
+        "tests/test_trebon.py",
+        "reference/portaly.md"
+      ],
+      "integration_decision": "Třeboň skládá nestejně velké krajní dlaždice vlevo nahoru bez vnitřních mezer; spojeno s cache #60. Prázdný rejstřík se nehlásí jako prokázané nenalezení. Zachován skutečný obrazový test 7×5."
+    },
+    {
+      "number": 49,
+      "title": "Support multiple family stories",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/49",
+      "state": "open",
+      "author": "vlapacek",
+      "head_sha": "0ddd863f33a2fcb2b4dd461faa2d662404efd572",
+      "base_sha": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "merge_base": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "changed_paths": [
+        "README.md",
+        "skills/rodokmen/SKILL.md",
+        "skills/rodokmen/reference/data.md",
+        "skills/rodokmen/reference/pribehy.md",
+        "skills/rodokmen/reference/soukromi.md",
+        "skills/rodokmen/reference/web.md",
+        "skills/rodokmen/template/CLAUDE.md",
+        "skills/rodokmen/template/data/STAV.md",
+        "skills/rodokmen/template/data/pribehy/.gitkeep",
+        "skills/rodokmen/template/data/web.json",
+        "skills/rodokmen/template/web/src/layouts/Base.astro",
+        "skills/rodokmen/template/web/src/lib/data.js",
+        "skills/rodokmen/template/web/src/pages/index.astro",
+        "skills/rodokmen/template/web/src/pages/pribehy/[slug].astro",
+        "skills/rodokmen/template/web/src/pages/pribehy/index.astro",
+        "skills/rodokmen/tools/export_web.py",
+        "skills/rodokmen/tools/kontrola.py",
+        "skills/rodokmen/tools/novy_projekt.py"
+      ],
+      "diff_bytes": 38864,
+      "reviewed": [
+        "metadata",
+        "body",
+        "complete git diff",
+        "available issue comments",
+        "available reviews"
+      ],
+      "disposition": "alternative",
+      "decision": "Více příběhů a kontrola soukromí jsou kompatibilní funkční cíle nové aplikace; původní Astro komponenty, závislosti a lockfile nejsou přeneseny.",
+      "archive_outputs": [],
+      "integration_decision": "Převzata zásada více příběhů pro jednotlivé osoby/pár a větve, rodinné texty a knižní výstupy. Samostatný správce markdownových článků a Astro routy z PR nejsou implementovány."
+    },
+    {
+      "number": 52,
+      "title": "Cursor: kompatibilita, AGENTS.md v šabloně a oprava Node ≥ 22.12",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/52",
+      "state": "open",
+      "author": "danielquisek",
+      "head_sha": "f748c0e3a9219e9af20bf17413ca0a17de88fa84",
+      "base_sha": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "merge_base": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "changed_paths": [
+        "README.md",
+        "skills/rodokmen/SKILL.md",
+        "skills/rodokmen/reference/cursor.md",
+        "skills/rodokmen/reference/data.md",
+        "skills/rodokmen/reference/matriky.md",
+        "skills/rodokmen/reference/portaly.md",
+        "skills/rodokmen/reference/web.md",
+        "skills/rodokmen/template/AGENTS.md",
+        "skills/rodokmen/tools/ahmp_scan.py",
+        "skills/rodokmen/tools/aron_img.py",
+        "skills/rodokmen/tools/novy_projekt.py",
+        "skills/rodokmen/tools/overit.py",
+        "skills/rodokmen/tools/ramecek.py",
+        "skills/rodokmen/tools/soal_zoomify.py",
+        "skills/rodokmen/tools/trebon.py",
+        "skills/rodokmen/tools/vyrez.py"
+      ],
+      "diff_bytes": 30647,
+      "reviewed": [
+        "metadata",
+        "body",
+        "complete git diff",
+        "available issue comments",
+        "available reviews"
+      ],
+      "disposition": "alternative",
+      "decision": "Podpora různých agentů a zachování klientských souborů je dobrý princip. Nový skill nevytváří konkurenční CLAUDE/AGENTS soubory ani pevný Node/Astro setup; překryv s #42.",
+      "archive_outputs": [],
+      "integration_decision": "Společné AGENTS a klientově neutrální postup. Skutečně potřebná verze Node22+ a kontrola prostředí; původní Cursor/Astro setup nepřevzat."
+    },
+    {
+      "number": 53,
+      "title": "Brzda 0.6.0 na Windows: opravy tools/slusne.py, doplňky a regresní testy",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/53",
+      "state": "open",
+      "author": "svamberk",
+      "head_sha": "41c9333466c5a25b0e74cbf367a6b21434aa46c8",
+      "base_sha": "2b657135f9dbe6843cc7515883252ad799fb40c9",
+      "merge_base": "2b657135f9dbe6843cc7515883252ad799fb40c9",
+      "changed_paths": [
+        "skills/rodokmen/tools/slusne.py",
+        "tests/brzda/README.md",
+        "tests/brzda/test_brzda.py",
+        "tests/brzda/test_hlidac.py"
+      ],
+      "diff_bytes": 39349,
+      "reviewed": [
+        "metadata",
+        "body",
+        "complete git diff",
+        "available issue comments",
+        "available reviews"
+      ],
+      "disposition": "adapted",
+      "decision": "Převzaty Windows CRLF, BASH_ENV, souběh vláken, podprocesy a stupňované stopky. Doplněna kontrola stopky po čekání, srozumitelná nejistá příčina a most pro Node. Klientský hook nepřibalen: samotný PR uvádí selhání Windows hookových testů.",
+      "archive_outputs": [
+        "tools/slusne.py",
+        "tests/brzda_regression.py",
+        "tests/test_archive.py"
+      ],
+      "integration_decision": "Převzaty Windows CRLF, BASH_ENV, souběh vláken, podprocesy a stupňované stopky. Doplněna kontrola stopky po čekání, srozumitelná nejistá příčina a most pro Node. Klientský hook nepřibalen: samotný PR uvádí selhání Windows hookových testů."
+    },
+    {
+      "number": 55,
+      "title": "Vějíř: plynulý posun a přibližování (hardwarová akcelerace, automaticky u velkých vějířů)",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/55",
+      "state": "open",
+      "author": "altaraneu",
+      "head_sha": "0291562c9ef208dde5af5532c69581c3b28c3744",
+      "base_sha": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "merge_base": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "changed_paths": [
+        "skills/rodokmen/reference/web.md",
+        "skills/rodokmen/template/web/package.json",
+        "skills/rodokmen/template/web/src/lib/fanmath.test.ts",
+        "skills/rodokmen/template/web/src/lib/fanmath.ts",
+        "skills/rodokmen/template/web/src/lib/fanview.ts",
+        "skills/rodokmen/template/web/src/pages/vejir.astro",
+        "skills/rodokmen/template/web/src/styles/global.css"
+      ],
+      "diff_bytes": 34072,
+      "reviewed": [
+        "metadata",
+        "body",
+        "complete git diff",
+        "available issue comments",
+        "available reviews"
+      ],
+      "disposition": "deferred",
+      "decision": "Canvas vějíř s SVG hit testem a matematické testy jsou hodnotná optimalizace konkrétní Astro komponenty. Canonical aplikace má vlastní vykreslování; přenos vyžaduje profilování a přizpůsobení, nikoli slepé kopírování.",
+      "archive_outputs": [],
+      "integration_decision": "Nově vytvořen čitelný SVG vějíř s dynamickým viewBoxem. GPU/canvas optimalizace původní Astro stránky je odložena; neprohlašujeme ji za přenesenou."
+    },
+    {
+      "number": 56,
+      "title": "nginx: map_hash_bucket_size 128 pro přihlašovací SHA-256 hash (fix 502 v Dockeru/CapRoveru)",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/56",
+      "state": "open",
+      "author": "mpeterka",
+      "head_sha": "12bb588ed675f8be874cd672d16093251771d15b",
+      "base_sha": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "merge_base": "a9bbdade916293d6dd3be640a23e7c10cab96849",
+      "changed_paths": [
+        "skills/rodokmen/template/web/nginx.sablona.conf"
+      ],
+      "diff_bytes": 825,
+      "reviewed": [
+        "metadata",
+        "body",
+        "complete git diff",
+        "available issue comments",
+        "available reviews"
+      ],
+      "disposition": "not-applicable",
+      "decision": "Nginx map_hash_bucket_size oprava patří do původního způsobu nasazení. Nový skill nenasazuje nginx jako výchozí funkci, proto nepřebírá serverový soubor.",
+      "archive_outputs": [],
+      "integration_decision": "Nginx/CapRover oprava zůstává zdokumentována, ale nový výchozí offline provoz nginx nepoužívá."
+    },
+    {
+      "number": 59,
+      "title": "Fix: YAML sekce SKILL.md nyní plně parsovatelná dle standardu YAML",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/59",
+      "state": "open",
+      "author": "aleqcz",
+      "head_sha": "a76d85d700a3a4b6b5a35e99f8f028ba0a58411a",
+      "base_sha": "1543f2719717558bf9ca4780396c1cfc7dd703c7",
+      "merge_base": "1543f2719717558bf9ca4780396c1cfc7dd703c7",
+      "changed_paths": [
+        "skills/rodokmen/SKILL.md"
+      ],
+      "diff_bytes": 1287,
+      "reviewed": [
+        "metadata",
+        "body",
+        "complete git diff",
+        "available issue comments",
+        "available reviews"
+      ],
+      "disposition": "duplicate",
+      "decision": "Stejný YAML description problém jako #26. Nové frontmatter je vlastní a validované, původní patch nepřidává další funkci.",
+      "archive_outputs": [],
+      "integration_decision": "Duplicitní YAML oprava #26 je splněna validovaným novým frontmatter."
+    },
+    {
+      "number": 60,
+      "title": "Sdílená cache snímků: stejný snímek se z archivu stahuje jen jednou",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/60",
+      "state": "open",
+      "author": "AdamFiser",
+      "head_sha": "b49b732bb9a18c9fbc5c2de57ac356b12e8277f2",
+      "base_sha": "2b657135f9dbe6843cc7515883252ad799fb40c9",
+      "merge_base": "2b657135f9dbe6843cc7515883252ad799fb40c9",
+      "changed_paths": [
+        "skills/rodokmen/SKILL.md",
+        "skills/rodokmen/tools/ahmp_scan.py",
+        "skills/rodokmen/tools/aron_img.py",
+        "skills/rodokmen/tools/cache.py",
+        "skills/rodokmen/tools/ebadatelna.py",
+        "skills/rodokmen/tools/portafontium.py",
+        "skills/rodokmen/tools/soal_zoomify.py",
+        "skills/rodokmen/tools/trebon.py"
+      ],
+      "diff_bytes": 23672,
+      "reviewed": [
+        "metadata",
+        "body",
+        "complete git diff",
+        "available issue comments",
+        "available reviews"
+      ],
+      "disposition": "adapted-rewritten",
+      "decision": "Cache zapojena do ARON, AHMP, Třeboně, Porta fontium, eBadatelny a Zoomify. Jádro přepsáno: zámek vláken i procesů pro jediný fetch, unikátní dočasné soubory, bezpečné klíče, atomické dokončení a úklid i při SystemExit. Řeší závody původního PID temp souboru.",
+      "archive_outputs": [
+        "tools/cache.py",
+        "tools/aron_img.py",
+        "tools/ahmp_scan.py",
+        "tools/trebon.py",
+        "tools/portafontium.py",
+        "tools/ebadatelna.py",
+        "tools/soal_zoomify.py",
+        "tests/test_archive.py"
+      ],
+      "integration_decision": "Cache zapojena do ARON, AHMP, Třeboně, Porta fontium, eBadatelny a Zoomify. Jádro přepsáno: zámek vláken i procesů pro jediný fetch, unikátní dočasné soubory, bezpečné klíče, atomické dokončení a úklid i při SystemExit. Řeší závody původního PID temp souboru."
+    },
+    {
+      "number": 62,
+      "title": "portaly.md: písemnosti vrchnosti, zemské desky a vodnimlyny.cz",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/62",
+      "state": "open",
+      "author": "mandmi92",
+      "head_sha": "6470aabf297f558ca7c69d2c7bc8a65993e9df65",
+      "base_sha": "2b657135f9dbe6843cc7515883252ad799fb40c9",
+      "merge_base": "2b657135f9dbe6843cc7515883252ad799fb40c9",
+      "changed_paths": [
+        "skills/rodokmen/SKILL.md",
+        "skills/rodokmen/reference/portaly.md"
+      ],
+      "diff_bytes": 5043,
+      "reviewed": [
+        "metadata",
+        "body",
+        "complete git diff",
+        "available issue comments",
+        "available reviews"
+      ],
+      "disposition": "adapted-method",
+      "decision": "Rozšířeny gruntovní, pozemkové, sirotčí, svatební a vrchnostenské prameny i návaznost na dějiny domu. Jde o metodické směry s citováním, ne automaticky doložená příbuzenství.",
+      "archive_outputs": [
+        "reference/prameny-a-pribehy.md",
+        "reference/metodika.md"
+      ],
+      "integration_decision": "Rozšířeny gruntovní, pozemkové, sirotčí, svatební a vrchnostenské prameny i návaznost na dějiny domu. Jde o metodické směry s citováním, ne automaticky doložená příbuzenství."
+    }
+  ],
+  "issues": [
+    {
+      "number": 1,
+      "title": "ged_import.py --osoby: neescapované jméno z GEDCOM umožní spustit kód přes exec(osoby.py)",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/1",
+      "disposition": "Původní exec(osoby.py) dovoloval spustit vstupní kód. V archivní sadě se osoby.py nenačítá; canonical migrace musí používat bezpečný parser."
+    },
+    {
+      "number": 3,
+      "title": "ftb_export.py: poznámky a žijící lidé jdou do exportu bez filtru",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/3",
+      "disposition": "Poznámky a příznak is_alive nejsou spolehlivá anonymizace. FTB výstupy výslovně označeny jako soukromé a potenciálně citlivé."
+    },
+    {
+      "number": 4,
+      "title": "ftb_export.py: GEDCOM odkazuje na smazané osoby",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/4",
+      "disposition": "FTB odkazy na smazané osoby opraveny PR #7 v main."
+    },
+    {
+      "number": 5,
+      "title": "portafontium.py: odkaz se ke snímku páruje jen podle pořadí; nečeká mezi požadavky",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/5",
+      "disposition": "PF párování snímku a odkazu opraveno PR #8; sdílené zpomalování nadále platí."
+    },
+    {
+      "number": 6,
+      "title": "Drobnosti: titulek vějíře počítá i nevykreslené generace; ftb_export CLI",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/6",
+      "disposition": "Rozlišovat maximální hloubku a skutečně vykreslené generace; FTB CLI patří do převzatého základu."
+    },
+    {
+      "number": 9,
+      "title": "Aktualizace projektu přes novy_projekt.py nepřepíše šablony webu – přihlášení se rozbije, oprava XSS v mapě a pojistka nasazení se nepropíšou",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/9",
+      "disposition": "Aktualizace šablony nesmí ponechat staré bezpečnostní chyby. Původní aktualizátor vynechán, nová migrace potřebuje zálohu a ověření."
+    },
+    {
+      "number": 11,
+      "title": "Nástroje by si měly samy nastavit UTF-8 výstup (Windows bez -X utf8 padá na UnicodeEncodeError)",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/11",
+      "disposition": "UTF-8 pro Python v izolovaném režimu řeší spouštěč -I -X utf8; Windows nebyl lokálně testován."
+    },
+    {
+      "number": 12,
+      "title": "Nástroj na přehled hlaviček snímků (rychlé nalezení roku a obce ve svazku)",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/12",
+      "disposition": "Pruhy záhlaví pomohou mapovat knihu. Neprokazují přečtení celého zápisu; samostatný nástroj nebyl dodán."
+    },
+    {
+      "number": 14,
+      "title": "Web: stránka „Putování rodu“ – vějíř podle krajů + mapa cest předků",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/14",
+      "disposition": "Putování rodu a mapa jsou náměty vizualizace. Bez nového kódu v issue; nevydávat za hotový přenos."
+    },
+    {
+      "number": 15,
+      "title": "Web: víc příběhů rodů (data/pribehy/<slug>.md)",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/15",
+      "disposition": "Více příběhů řeší PR #49 a canonical aplikace; není důvod přidávat druhou Astro šablonu."
+    },
+    {
+      "number": 16,
+      "title": "Kronika v PDF a nástroj na sépiovou perokresbu z fotek",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/16",
+      "disposition": "PDF kronika a perokresby jsou návrhy. Obrazová ilustrace nesmí být vydávána za originální archivní doklad."
+    },
+    {
+      "number": 17,
+      "title": "Skrytá osoba: na webu jen iniciály a bez předků (skryt=True v osoby.py)",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/17",
+      "disposition": "Soukromí zahrnuje raw JSON, obrázky, přepisy, hledání i mapu, ne pouze skryté jméno ve stromu."
+    },
+    {
+      "number": 18,
+      "title": "ARON východočeský archiv - odkaz na první stánku matriky, nikoliv aktuální",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/18",
+      "disposition": "ARON permalink musí odkazovat na skutečný TILE; zapracováno z #22."
+    },
+    {
+      "number": 21,
+      "title": "Kramerius a MAZ Acta Publica poznamky z prvniho sezeni",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/21",
+      "disposition": "MZA/Kramerius zkušenosti využity při routování; MZA nový adaptér a Kramerius v5 varianta z #29."
+    },
+    {
+      "number": 24,
+      "title": "MZA Actapublica – celý obrázek stránky nejde stáhnout, funkční řešení přes Deepzoom dlaždice",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/24",
+      "disposition": "MZA Deep Zoom je součástí #29. Ochrany přístupu ani TLS se nevypínají."
+    },
+    {
+      "number": 25,
+      "title": "v0.5.0 audit: stale published images, identifier collisions, and genealogy import/export consistency",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/25",
+      "disposition": "Detailně rozebráno v oddílu issue25; rizika jsou převážně původní Astro/osoby.py pipeline, která není defaultem nové sady."
+    },
+    {
+      "number": 27,
+      "title": "navrh na zapracovani GPS standardu",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/27",
+      "disposition": "Genealogical Proof Standard je metodický cíl, nikoli úspěšný běh validátoru. Koordinovat s hlavní metodikou."
+    },
+    {
+      "number": 30,
+      "title": "Poznámky z praxe (Windows): ZA Opava, ARON Zámrsk, Kramerius, Netlify, web",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/30",
+      "disposition": "Opava skutečná URL, sdílená brzda, Kramerius a Windows výstup: zapracované podněty; historické tvrzení o neomezených obrazech odmítnuto."
+    },
+    {
+      "number": 31,
+      "title": "Problém s vykreslováním vějíře rodu, když je předek v rodokmenu dvakrát",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/31",
+      "disposition": "Pedigree collapse není cyklus. Nová aplikace a migrace musí odlišit opakovanou osobu od cyklického předka."
+    },
+    {
+      "number": 32,
+      "title": "Rodokmen z pohledu víc výchozích osob (děti dvou rodičů, sourozenci, rodiče) – mám hotové, nabízím PR",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/32",
+      "disposition": "Více výchozích osob je cenný požadavek; issue nabízí kód, ale veřejný PR s touto implementací není v inventáři."
+    },
+    {
+      "number": 33,
+      "title": "Export rodokmenu do GEDCOM 5.5.1 (souhrn i pohledy, žijící skrytí) – hotové, nabízím PR",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/33",
+      "disposition": "GEDCOM export s prameny je požadavek, nikoli dostupný PR. Canonical aplikace používá vlastní GEDCOM modul."
+    },
+    {
+      "number": 34,
+      "title": "Postup čtení a ověřování: kontrolní zápis pro pomocníky, nezávislé druhé čtení, vzory písaře, „zápis doložen × vazba doložena“",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/34",
+      "disposition": "Kontrolní známý zápis, nezávislé druhé čtení a rozdíl zápis/vazba zapracovány do metodiky."
+    },
+    {
+      "number": 35,
+      "title": "Další prameny: sčítání lidu 1921 a civilní matriky 1939–45 (SOA Litoměřice), GenTeam, žádost na matriku datovou schránkou",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/35",
+      "disposition": "Sčítání 1921 a civilní knihy mají jiné filtry než matriky. Nové právní kroky a podmínky GenTeam vyžadují aktuální ověření."
+    },
+    {
+      "number": 36,
+      "title": "Provoz webu: víc uživatelů s vlastním heslem, log návštěv, heslo mimo git, nasazení na Synology NAS – hotové, nabízím PR",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/36",
+      "disposition": "Multiuser/NAS nasazení a hesla mimo git jsou návrhy bez přiloženého veřejného kódu. Nepřidán falešný hotový adaptér."
+    },
+    {
+      "number": 37,
+      "title": "Drobné opravy nástrojů: overit.py, ebadatelna.py, kontrola.py, ramecek.py, vybledlé snímky",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/37",
+      "disposition": "overit.py nyní kontroluje ImageMagick a nehlásí neexistující výstup; resize omezuje obě strany. eBadatelna diagnostika a jasné souřadnice zapracovány."
+    },
+    {
+      "number": 38,
+      "title": "Rodokmen",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/38",
+      "disposition": "Bez technicky využitelného návrhu pro tuto sadu; nepřebírat osobní údaje ani příběhy jako výchozí data."
+    },
+    {
+      "number": 39,
+      "title": "A",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/39",
+      "disposition": "Bez technicky využitelného návrhu pro tuto sadu; nepřebírat osobní údaje ani příběhy jako výchozí data."
+    },
+    {
+      "number": 40,
+      "title": "Vojenské prameny – Verlustlisten, databáze VÚA–VHA, legionáři, pomníky padlých",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/40",
+      "disposition": "Vojenské směry VÚA, Kriegsarchiv, Verlustlisten a pomníky zařazeny do pramenů; totožnost se musí doložit."
+    },
+    {
+      "number": 43,
+      "title": "Podpora Codexu a OMP (PR #42)",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/43",
+      "disposition": "Doprovod k PR #42; přenosný skill nemění systémové oprávnění klienta."
+    },
+    {
+      "number": 44,
+      "title": "Marek Veselý",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/44",
+      "disposition": "Bez technicky využitelného návrhu pro tuto sadu; nepřebírat osobní údaje ani příběhy jako výchozí data."
+    },
+    {
+      "number": 45,
+      "title": "Tip: omezit rychlost dotazů na weby archivů (prevence banů)",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/45",
+      "disposition": "Zpomalování realizuje main a #53; rozšířeno i na všechny nové adaptéry #29."
+    },
+    {
+      "number": 50,
+      "title": "Poznámky z praxe (macOS): Cloudflare Workers, chyba SAME v export_web, víc příběhů, odkazy mezi matrikami, zadání pomocníkům",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/50",
+      "disposition": "Cloudflare auth musí chránit soubory před statickým servírováním; nezkoušeno. SAME/collateral/multiple stories pokrývá canonical model. Více souběžných downloaderů z jednoho archivu odmítnuto."
+    },
+    {
+      "number": 51,
+      "title": "Dělnická",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/51",
+      "disposition": "Bez technicky využitelného návrhu pro tuto sadu; nepřebírat osobní údaje ani příběhy jako výchozí data."
+    },
+    {
+      "number": 54,
+      "title": "Poznámky z používání skillu (macOS, Praha, židovské matriky, Netlify)",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/54",
+      "disposition": "Stará badatelna.eu nahrazena VadeMeCum NA; policejní karty ověřovat vizuálně i nad první stránkou. Zastaralé Netlify ceny nefixovat do instrukcí."
+    },
+    {
+      "number": 57,
+      "title": "Harm",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/57",
+      "disposition": "Bez technicky využitelného návrhu pro tuto sadu; nepřebírat osobní údaje ani příběhy jako výchozí data."
+    },
+    {
+      "number": 58,
+      "title": "Poznámky z praxe (Windows + WSL, SOA Třeboň): GenoPro, bydliště v GEDCOM, rejstříky a knihy po obcích, aktualizace skillu",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/58",
+      "disposition": "GenoPro ZIP/XML není implementovaný importér; RESI není narození. Stabilní ID, indexové pododdíly, přečíslování domů a cache zahrnuty do metodiky."
+    },
+    {
+      "number": 61,
+      "title": "Poznámky z praxe (macOS, MZA Brno, Docker): nginx, přihlášení přes http, příběh, dotazník",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/61",
+      "disposition": "Nginx duplicity a crypto.subtle přes HTTP patří k původnímu provozu. Neřešit chybu šifrování přechodem na nezabezpečený HTTP; rodinná otázka není plnohodnotné řízení přístupu."
+    },
+    {
+      "number": 63,
+      "title": "Poznámky z praxe II: pomocník bez snímků, gruntovní knihy SOA Třeboň, dvě sezení v projektu, dějiny domu, postřehy k 0.6.0",
+      "url": "https://github.com/sarsonj/rodokmen-skill/issues/63",
+      "disposition": "Pomocník bez viditelných snímků nesmí vyrábět čtení. Dva zapisovatelé nesmí soupeřit o ledger/ID; sdílená brzda i pro dějiny domu. Zahrnuto."
+    }
+  ],
+  "issue25": [
+    {
+      "risk": "Zastaralé publikované JPG po odstranění dokladu; neúspěšný build kontaminuje další build.",
+      "response": "Původní export_web pipeline nepřevzata. Canonical publikační export musí sestavovat oddělený nový výstup a filtrovat také média."
+    },
+    {
+      "risk": "Path traversal identifikátorů a kolize slugů, včetně přepsání kořenové osoby.",
+      "response": "Archivní klíče, project_file a cache validují cestu a symlinky. Nová canonical ID nesmějí vznikat pouze ze jména/roku; migrace má zachovat původní ID a hlásit konflikt."
+    },
+    {
+      "risk": "GEDCOM ancestry cyklus nebo SAME cyklus/dangling alias; legitimní opakovaný předek není cyklus.",
+      "response": "Původní načítání GEDCOM/osoby.py vynecháno. Parent vytváří bezpečnou migraci s explicitními varováními. Ověřit graf po cestách, nikoli zamítnout každé opakování."
+    },
+    {
+      "risk": "První FAMC bez rozlišení adopce a narození; více svazků a společné děti se při přepočtu míchají.",
+      "response": "Zachovat typ vztahu a alternativy. Canonical data mají být zdrojová, pohledy odvozené; žádný import nesmí tiše vybrat první rodinu jako biologickou."
+    },
+    {
+      "risk": "FTB ztrácí page/fact citation a některé specifické vztahy.",
+      "response": "Přidán JSON provenance sidecar s úplnými extrahovanými citation_details včetně stránky a původního vlastníka. GEDCOM stále označen jako částečný export, ne bezztrátový roundtrip."
+    },
+    {
+      "risk": "BEF/ABT datum se stane přesným rokem; křest/narození a pohřeb/úmrtí se zamění.",
+      "response": "Metodika a canonical migrace mají zachovat typ události a kvalifikátor. Původní ztrátový renderer nepřevzat."
+    },
+    {
+      "risk": "Soukromí vypouští známá pole, ale nechává kontakty ve volném textu a médiích.",
+      "response": "FTB dokumentace výslovně popisuje neanonymizovaný text a nespolehlivé is_alive. Nové publikování vyžaduje oddělenou redakci všech vrstev."
+    },
+    {
+      "risk": "overit.py vypíše cestu po selhání ImageMagick, nesprávná velikost/crop.",
+      "response": "Přepsán s check=True, kontrolou výstupu, omezením 1900×1900 a validací souřadnic. Regrese ověřuje, že chyba nehlásí úspěch."
+    },
+    {
+      "risk": "ARON částečný výřez odpovídá dlaždicím, nikoli přesným požadovaným souřadnicím.",
+      "response": "Ořez po složení s floor/ceil, jednotkový test 0.1–0.2 na 256 px kontroluje 27×27."
+    },
+    {
+      "risk": "Mapový regex vynechá roky 2000+, coverage míchá unikátní osoby s pozicemi, titul vějíře může nadhodnocovat generace.",
+      "response": "Původní Astro mapový/statistický kód nepřevzat. Dokumentované definice metrik a požadavek zachovat novější data."
+    },
+    {
+      "risk": "Validátor struktur je zaměněn za důkaz genealogické pravdy a chronologie.",
+      "response": "Metodika odděluje čitelnost, citaci, ztotožnění a vztah. Automatický test nepotvrzuje rodinnou vazbu."
+    },
+    {
+      "risk": "Zaměnění lhůty nahlížení do zápisu a předání celé knihy.",
+      "response": "Starý text odstraněn. Aktuální právní formulace a primární zdroj jsou v hlavní metodice koordinátora; archivní reference rozlišuje jednotlivý zápis, celou knihu a online dostupnost."
+    },
+    {
+      "risk": "Příběh dovodí početí ze 267 dnů od svatby nebo přisoudí příčinu bez pramene.",
+      "response": "Výslovně vyloučeno v pramenech/příbězích; doba těhotenství ani blízkost dat neprokazuje konkrétní děj."
+    },
+    {
+      "risk": "Node 20 proti požadavkům Astro lockfile a audit závislostí.",
+      "response": "Astro a jeho lockfile vynechány. Lokální nález závislosti je riziko aktualizace, ne důkaz zneužití statické aplikace."
+    }
+  ],
+  "limitations": [
+    "This is a source and integration audit, not certification of every code path or a legal opinion.",
+    "All available PRs were assessed; open PR code was selected, adapted or explicitly excluded rather than blindly merged.",
+    "A successful local fixture does not verify current portal HTML/API or establish a permissible request rate.",
+    "User comments are experience reports, not independently verified universal facts.",
+    "Canonical data migration and offline app are implemented by the coordinating agents, outside this archive subset."
+  ]
+}

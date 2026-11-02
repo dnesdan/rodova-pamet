@@ -1,0 +1,114 @@
+#!/usr/bin/env python3
+"""Snímek matriky ve formátu Zoomify (SOA Litoměřice, ZA Opava, Národní archiv) v plném rozlišení – bez prohlížeče a bez cookies.
+
+Použití (z kořene projektu):
+  soal_zoomify.py <cesta nebo adresa> <zmenseni> <vystup.jpg> [x0,y0,x1,y1]
+    cesta     = SOA Litoměřice: část adresy obrázku za „…/CZ-214000010/matriky/“ (konec typicky „….jpg“), vezmi ji jednou
+                z prohlížeče: v digitální badatelně otevři snímek a v síťovém provozu najdi požadavek na
+                https://images.soalitomerice.cz/ximage/matriky/zoomify/cz/archives/CZ-214000010/matriky/<cesta>/ImageProperties.xml
+                (další snímky téže knihy mají stejnou cestu, liší se jen číslem obrázku)
+    adresa    = celá adresa obrázku začínající https:// (s „/ImageProperties.xml“ na konci i bez), např. ZA Opava:
+                https://images.archives.cz/ximage/matriky/zoomify/cz/archives/CZ-217000010/NAD-165/dao/images/<složka>/<uuid>.jpg
+    zmenseni  = 0 plné rozlišení (na čtení a výřez), 1 poloviční (na orientaci), 2 čtvrtinové
+    x0,y0,x1,y1 = výřez 0–1; stahují se pouze potřebné dlaždice
+POZOR: aplikace digi.soalitomerice.cz po ~100 rychlých požadavcích (digi.archives.cz v Opavě už po ~75) zablokuje
+přístup na 30 minut. Prohlížečem jen najdi knihu a cestu k obrázkům, snímky pak stahuj tímto nástrojem (všechny požadavky podléhají společné brzdě).
+"""
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__))); import slusne
+from archive_common import project_root, emit_catalog, safe_key, project_file, atomic_json
+import math, os, re, shutil, subprocess, sys, tempfile, time, urllib.parse, urllib.request
+import concurrent.futures as cf
+for _s in (sys.stdout, sys.stderr):   # UTF-8 výstup i na Windows bez -X utf8 (cp1250 neumí třeba „→“)
+    if hasattr(_s, "reconfigure"):
+        _s.reconfigure(encoding="utf-8", errors="replace")
+
+BASE = "https://images.soalitomerice.cz/ximage/matriky/zoomify/cz/archives/CZ-214000010/matriky/"
+HOSTS = ("images.soalitomerice.cz", "images.archives.cz", "vademecum.nacr.cz")   # jen obrázkové servery archivů (snímky zpracovává ImageMagick)
+
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))   # -I nepřidává složku skriptu
+from obraz import magick   # společný hledač ImageMagicku (tools/obraz.py)
+
+
+def get(url):
+    err = None
+    for _ in range(3):
+        try:
+            return urllib.request.urlopen(url, timeout=30).read()
+        except Exception as e:
+            time.sleep(1)
+            err = e
+    raise err
+
+
+def main():
+    if len(sys.argv) not in (4, 5):
+        sys.exit(__doc__)
+    arg = sys.argv[1].strip().removesuffix("/ImageProperties.xml").strip("/")
+    base = arg if arg.startswith("http") else BASE + arg
+    if urllib.parse.urlsplit(base).scheme != "https" or urllib.parse.urlsplit(base).hostname not in HOSTS:
+        sys.exit(f"Adresa musí být https:// na serveru archivu ({', '.join(HOSTS)}), ne {base[:80]}")
+    red, out = int(sys.argv[2]), sys.argv[3]
+    box = None
+    if len(sys.argv) == 5:
+        box = [float(v) for v in sys.argv[4].split(",")]
+        if len(box) != 4 or not all(0 <= v <= 1 for v in box) or box[0] >= box[2] or box[1] >= box[3]:
+            sys.exit("Výřez: x0,y0,x1,y1 v rozsahu 0–1 (zleva doprava, shora dolů).")
+    import cache, hashlib
+    key=f"zoomify/{urllib.parse.urlsplit(base).hostname}/{hashlib.sha256((base+'|'+str(red)+'|'+str(box)).encode()).hexdigest()}.jpg"
+    cache.soubor(key,out,lambda target: download(base,red,target,box))
+    print(out)
+
+
+def download(base, red, out, box=None):
+    if red < 0 or red > 20: raise ValueError("Úroveň musí být 0–20.")
+    os.makedirs(os.path.dirname(os.path.abspath(out)), exist_ok=True)
+    MAGICK = magick()
+    x = get(base + "/ImageProperties.xml").decode()
+    W, H, T = (int(re.search(fr'{k}="(\d+)"', x).group(1)) for k in ("WIDTH", "HEIGHT", "TILESIZE"))
+    dims, w, h = [], W, H   # úrovně Zoomify od nejmenší po plné rozlišení
+    while True:
+        dims.append((w, h))
+        if w <= T and h <= T:
+            break
+        w, h = (w + 1) // 2, (h + 1) // 2
+    dims = dims[::-1]
+    counts = [math.ceil(a / T) * math.ceil(b / T) for a, b in dims]
+    L = len(dims) - 1 - red
+    if L < 0: raise ValueError("Úroveň přesahuje obrazovou pyramidu.")
+    w, h = dims[L]
+    nx, ny = math.ceil(w / T), math.ceil(h / T)
+    start = sum(counts[:L])
+    if box:   # jen dlaždice, které výřez zasahuje (šetří server i čas)
+        px0, py0 = int(box[0] * w), int(box[1] * h)
+        px1, py1 = px0 + int((box[2] - box[0]) * w), py0 + int((box[3] - box[1]) * h)
+        cx0, cx1, cy0, cy1 = px0 // T, max(px0, px1 - 1) // T, py0 // T, max(py0, py1 - 1) // T
+        geo = f"{max(1, px1 - px0)}x{max(1, py1 - py0)}+{px0 - cx0 * T}+{py0 - cy0 * T}"
+    else:
+        cx0, cx1, cy0, cy1 = 0, nx - 1, 0, ny - 1
+        geo = f"{w}x{h}+0+0"
+    d = tempfile.mkdtemp(dir=os.path.dirname(os.path.abspath(out)))
+    try:   # dočasnou složku uklidit i při výpadku sítě nebo chybě ImageMagicku
+        def tile(yx):
+            y, xx = yx
+            g = (start + y * nx + xx) // 256
+            f = os.path.join(d, f"{y:03d}_{xx:03d}.jpg")
+            with open(f, "wb") as fh:
+                fh.write(get(f"{base}/TileGroup{g}/{L}-{xx}-{y}.jpg"))
+        with cf.ThreadPoolExecutor(4) as ex:   # 4 souběžně: několikrát rychlejší, frekvenci všech vláken sdílí slusne.py
+            list(ex.map(tile, [(y, xx) for y in range(cy0, cy1 + 1) for xx in range(cx0, cx1 + 1)]))
+        # řádky dlaždic +append, pak řádky pod sebe -append (montage na ImageMagicku 7.1.2 padá bez písma);
+        # krátká jména (cwd=d) a po řádcích: celá stránka v jednom příkazu by na Windows přesáhla limit příkazové řádky
+        rows = []
+        for y in range(cy0, cy1 + 1):
+            rows.append(f"row{y:03d}.miff")   # MIFF zachová vlastnosti JPEG (podvzorkování barev)
+            subprocess.run([MAGICK, *[f"{y:03d}_{xx:03d}.jpg" for xx in range(cx0, cx1 + 1)], "+append", rows[-1]], check=True, cwd=d)
+        subprocess.run([MAGICK, *rows, "-append", "-crop", geo, "+repage", "-quality", "88",
+                        os.path.abspath(out)], check=True, cwd=d)
+    finally:
+        shutil.rmtree(d, ignore_errors=True)
+    print(out, *((max(1, px1 - px0), max(1, py1 - py0)) if box else (w, h)))
+
+
+if __name__ == "__main__":
+    main()

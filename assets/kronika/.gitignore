@@ -1,0 +1,23 @@
+# Lokální nástroje a dočasné soubory
+node_modules/
+.venv*/
+__pycache__/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.tmp
+*.temp
+
+# Vygenerované výstupy obsahují osobní údaje – nikdy je necommituj.
+dist/
+
+# Archiv originálních fotografií a plné nahrávky rozhovorů zálohuj mimo git.
+assets/original/
+assets/interviews/*/audio/
+
+# Archivní vydání (scripts/release.mjs) se ukládají mimo git.
+releases/
+
+# Zmenšené obrázky lehkého vydání (cache, vznikají při buildu).
+assets/light/

@@ -1,0 +1,832 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-02",
+  "repository": "https://github.com/sarsonj/rodokmen-skill",
+  "main_sha": "2b657135f9dbe6843cc7515883252ad799fb40c9",
+  "license": {
+    "spdx": "MIT",
+    "copyright": "Copyright (c) 2026 Jindřich Šaršon",
+    "source": "https://github.com/sarsonj/rodokmen-skill/blob/2b657135f9dbe6843cc7515883252ad799fb40c9/LICENSE",
+    "excluded": [
+      "skills/rodokmen/reference/playbook.md"
+    ],
+    "reason": "Upstream explicitly excludes this third-party research text; author and redistribution license are unspecified. No text from it redistributed.",
+    "other_findings": "No other explicit repository-license carve-out found in reviewed PR diffs. PR #19 map-layer attribution remains external; map data and assets not copied. Archive images remain subject to their own rights and access conditions."
+  },
+  "sources": {
+    "tools/ahmp_parse.py": {
+      "origin": "adapted upstream",
+      "upstream_commit": "2b657135f9dbe6843cc7515883252ad799fb40c9",
+      "upstream_path": "skills/rodokmen/tools/ahmp_parse.py",
+      "description": "Preserved upstream function with shared rate guard and compatible local import bootstrap where needed.",
+      "prs": [],
+      "sha256": "5de2f3305a9ccb321119bd318ea5be3695eeb757629673a6eb82096d22e776a8"
+    },
+    "tools/ahmp_scan.py": {
+      "origin": "adapted upstream",
+      "upstream_commit": "2b657135f9dbe6843cc7515883252ad799fb40c9",
+      "upstream_path": "skills/rodokmen/tools/ahmp_scan.py",
+      "description": "Rewritten around observed HTTPS AHMP Zoomify paths, shared region downloader and cache, validation and cleanup.",
+      "prs": [
+        29,
+        60
+      ],
+      "sha256": "fef25f187095abbfceeca3294be02467ce9648d7e2b1f87a730aa3d0e5f48dda"
+    },
+    "tools/ahmp_search.sh": {
+      "origin": "adapted upstream",
+      "upstream_commit": "2b657135f9dbe6843cc7515883252ad799fb40c9",
+      "upstream_path": "skills/rodokmen/tools/ahmp_search.sh",
+      "description": "Strict shell mode, bounded pages, temp cleanup, UTF-8, guarded curl.",
+      "prs": [],
+      "sha256": "60a76bb1389ffbf6b4dce241318e789bfaaf1723dbb3a4abfde8eaa7ceb34f5b"
+    },
+    "tools/anno.py": {
+      "origin": "adapted upstream",
+      "upstream_commit": "2b657135f9dbe6843cc7515883252ad799fb40c9",
+      "upstream_path": "skills/rodokmen/tools/anno.py",
+      "description": "Preserved upstream function with shared rate guard and compatible local import bootstrap where needed.",
+      "prs": [],
+      "sha256": "c62b491498fb9d5c0d828bfcadb5963769e23208dcf7eb1a738cf134c48ff28c"
+    },
+    "tools/anno_snap.py": {
+      "origin": "adapted upstream",
+      "upstream_commit": "2b657135f9dbe6843cc7515883252ad799fb40c9",
+      "upstream_path": "skills/rodokmen/tools/anno_snap.py",
+      "description": "Preserved upstream function with shared rate guard and compatible local import bootstrap where needed.",
+      "prs": [],
+      "sha256": "637e808a08727692d615eca19ee11a8d5e815188a3858e80584c84b3bb865259"
+    },
+    "tools/archive_common.py": {
+      "origin": "new",
+      "description": "New safe project paths, atomic JSON helper and unverified catalogue candidate contract; no canonical writes.",
+      "prs": [],
+      "sha256": "6f3281c664e000c8b8345772fd91e822cae5d4433d622010b497baa2bf01c4ba"
+    },
+    "tools/archivy.py": {
+      "origin": "new",
+      "description": "New allowlisted 27-command dispatcher; AST-only help; isolated UTF-8 Python invocation.",
+      "prs": [],
+      "sha256": "cd48beeafcbbab268bf5366cdd6ad9c5158de9695cd05a57b8ea05b6fc17c83f"
+    },
+    "tools/arolsen.py": {
+      "origin": "adapted upstream",
+      "upstream_commit": "00ced9b1a33c532c87b83ee3b38ce58431948e4c",
+      "upstream_path": "skills/rodokmen/tools/arolsen.py",
+      "description": "Preserved upstream function with shared rate guard and compatible local import bootstrap where needed.",
+      "prs": [
+        29
+      ],
+      "sha256": "3a3f4cde212e5650d90275ae450afafae1fc4e8311487bd5000a84804f0de087"
+    },
+    "tools/aron_img.py": {
+      "origin": "adapted upstream",
+      "upstream_commit": "2b657135f9dbe6843cc7515883252ad799fb40c9",
+      "upstream_path": "skills/rodokmen/tools/aron_img.py",
+      "description": "TILE links bound to matching DAO; exact fractional crop; safe full IDs; candidate metadata; cache and shared rate guard.",
+      "prs": [
+        22,
+        29,
+        60
+      ],
+      "sha256": "ff557d60dc7b78b5adf6d1edb3fa6c40aeb12ff3f6107afe48189cd18db800ef"
+    },
+    "tools/aron_search.py": {
+      "origin": "adapted upstream",
+      "upstream_commit": "2b657135f9dbe6843cc7515883252ad799fb40c9",
+      "upstream_path": "skills/rodokmen/tools/aron_search.py",
+      "description": "Preserved upstream function with shared rate guard and compatible local import bootstrap where needed.",
+      "prs": [],
+      "sha256": "6bf6063ce44fb222527dde3c111962511ca888368d3d78f3dcf057d3841675fd"
+    },
+    "tools/brno_encyklopedie.py": {
+      "origin": "adapted upstream",
+      "upstream_commit": "00ced9b1a33c532c87b83ee3b38ce58431948e4c",
+      "upstream_path": "skills/rodokmen/tools/brno_encyklopedie.py",
+      "description": "Preserved upstream function with shared rate guard and compatible local import bootstrap where needed.",
+      "prs": [
+        29
+      ],
+      "sha256": "a6365fe453350d88b9ce6dc6937da6ed22d4148ac9921c4eabd3bec0c7e11e3e"
+    },
+    "tools/cache.py": {
+      "origin": "rewritten from PR60 design",
+      "upstream_commit": "b49b732bb9a18c9fbc5c2de57ac356b12e8277f2",
+      "upstream_path": "skills/rodokmen/tools/cache.py",
+      "description": "Rewritten single-fetch process/thread locking, unique temporary names, atomic replace, containment and failure cleanup.",
+      "prs": [
+        60
+      ],
+      "sha256": "59a826c829ba50ed95c9f4767d26560eab139098c15529e2eaa0519781cbed00"
+    },
+    "tools/ebadatelna.py": {
+      "origin": "adapted upstream",
+      "upstream_commit": "2b657135f9dbe6843cc7515883252ad799fb40c9",
+      "upstream_path": "skills/rodokmen/tools/ebadatelna.py",
+      "description": "PR47 diagnostics and PR60 cache; shared stop wins over retries; catalogue candidates.",
+      "prs": [
+        47,
+        60
+      ],
+      "sha256": "6e522f7b85cf9bd99104db2fd2fde133b620bbb23629c041bcf1eebaa027d1ed"
+    },
+    "tools/ftb_export.py": {
+      "origin": "adapted upstream",
+      "upstream_commit": "2b657135f9dbe6843cc7515883252ad799fb40c9",
+      "upstream_path": "skills/rodokmen/tools/ftb_export.py",
+      "description": "Retained read-only import; full extracted citation details/page in provenance sidecar; explicit partial GEDCOM and privacy warnings.",
+      "prs": [],
+      "sha256": "13658045ae6009037d0355d1c861233a8116f8f172fb58b2eee60b1c4f6e7431"
+    },
+    "tools/kramerius.py": {
+      "origin": "adapted upstream",
+      "upstream_commit": "00ced9b1a33c532c87b83ee3b38ce58431948e4c",
+      "upstream_path": "skills/rodokmen/tools/kramerius.py",
+      "description": "Preserved upstream function with shared rate guard and compatible local import bootstrap where needed.",
+      "prs": [
+        29
+      ],
+      "sha256": "d08f40636a4acb1a56859993bcfd6aabebb9c5b030c2dc42902b7d90f685bb0d"
+    },
+    "tools/litomerice.py": {
+      "origin": "adapted upstream",
+      "upstream_commit": "00ced9b1a33c532c87b83ee3b38ce58431948e4c",
+      "upstream_path": "skills/rodokmen/tools/litomerice.py",
+      "description": "Shared guard; safe full catalogue identifiers; working query map under project; catalogue candidates.",
+      "prs": [
+        29
+      ],
+      "sha256": "f23215babf089300099d8aa10c284433b46088c3cd1e19f82b02caef2dde50e8"
+    },
+    "tools/matricula.py": {
+      "origin": "adapted upstream",
+      "upstream_commit": "00ced9b1a33c532c87b83ee3b38ce58431948e4c",
+      "upstream_path": "skills/rodokmen/tools/matricula.py",
+      "description": "Preserved upstream function with shared rate guard and compatible local import bootstrap where needed.",
+      "prs": [
+        29
+      ],
+      "sha256": "f8acceafe6f00fdcbec740610e3acec63c712720459ee205602a07712c0c33cb"
+    },
+    "tools/matricula_snimek.cjs": {
+      "origin": "adapted upstream",
+      "upstream_commit": "00ced9b1a33c532c87b83ee3b38ce58431948e4c",
+      "upstream_path": "skills/rodokmen/tools/matricula_snimek.js",
+      "description": "CommonJS extension; permitted real-browser capture; Python guard bridge for documents/images; verify chosen image; refuse overwrite.",
+      "prs": [
+        29
+      ],
+      "sha256": "ea919d2a6605b6ad38225efdc1d54eda5cd8a542654e946b19427a6b7889316f"
+    },
+    "tools/mauthausen.py": {
+      "origin": "adapted upstream",
+      "upstream_commit": "00ced9b1a33c532c87b83ee3b38ce58431948e4c",
+      "upstream_path": "skills/rodokmen/tools/mauthausen.py",
+      "description": "Preserved upstream function with shared rate guard and compatible local import bootstrap where needed.",
+      "prs": [
+        29
+      ],
+      "sha256": "ed21b1c8d60afdefbbb665a92e0428c8ac30a9526ea4d012100cd240fc6f63e7"
+    },
+    "tools/mza.py": {
+      "origin": "adapted upstream",
+      "upstream_commit": "00ced9b1a33c532c87b83ee3b38ce58431948e4c",
+      "upstream_path": "skills/rodokmen/tools/mza.py",
+      "description": "Shared guard for one explicit curl HTTP/2 request; output status checked; no retry through stop; safe catalogue candidates.",
+      "prs": [
+        29
+      ],
+      "sha256": "d8c7a2b2a007ea979de414a66158045d9ea33bc8975be46fe5168ab4c7d57956"
+    },
+    "tools/obeti.py": {
+      "origin": "adapted upstream",
+      "upstream_commit": "00ced9b1a33c532c87b83ee3b38ce58431948e4c",
+      "upstream_path": "skills/rodokmen/tools/obeti.py",
+      "description": "Preserved upstream function with shared rate guard and compatible local import bootstrap where needed.",
+      "prs": [
+        29
+      ],
+      "sha256": "465ba1cfa50f1eecdc05fb862fa7b8e82cb7c46323f6e1d6df82b781c9da0a2e"
+    },
+    "tools/obraz.py": {
+      "origin": "adapted upstream",
+      "upstream_commit": "00ced9b1a33c532c87b83ee3b38ce58431948e4c",
+      "upstream_path": "skills/rodokmen/tools/obraz.py",
+      "description": "Preserved upstream function with shared rate guard and compatible local import bootstrap where needed.",
+      "prs": [
+        29
+      ],
+      "sha256": "4e7987b884729182a0f934585fcaac231d8f29df47448f0fd318464a6ba5b6af"
+    },
+    "tools/overit.py": {
+      "origin": "adapted upstream",
+      "upstream_commit": "2b657135f9dbe6843cc7515883252ad799fb40c9",
+      "upstream_path": "skills/rodokmen/tools/overit.py",
+      "description": "Rewritten checked image commands and bounded thumbnails; no false success; no claim of verified reading.",
+      "prs": [],
+      "sha256": "ecb9f834b415009add49679bfb0b5034290484cf10da9aec582bb8532b498e1b"
+    },
+    "tools/policie_prihlasky.py": {
+      "origin": "adapted upstream",
+      "upstream_commit": "2b657135f9dbe6843cc7515883252ad799fb40c9",
+      "upstream_path": "skills/rodokmen/tools/policie_prihlasky.py",
+      "description": "Preserved upstream function with shared rate guard and compatible local import bootstrap where needed.",
+      "prs": [],
+      "sha256": "f1728a5560df109770a0556e4af291c9fac2dff8c618f30e634d3d83c05f3006"
+    },
+    "tools/portafontium.py": {
+      "origin": "adapted upstream",
+      "upstream_commit": "2b657135f9dbe6843cc7515883252ad799fb40c9",
+      "upstream_path": "skills/rodokmen/tools/portafontium.py",
+      "description": "Shared cache/guard; safe keys; catalogue candidate JSON instead of legacy writes.",
+      "prs": [
+        60
+      ],
+      "sha256": "5f4f26c2c158bb609a4c037fefbc3b020ef5667632cc5964da036288de9d1813"
+    },
+    "tools/ramecek.py": {
+      "origin": "adapted upstream",
+      "upstream_commit": "2b657135f9dbe6843cc7515883252ad799fb40c9",
+      "upstream_path": "skills/rodokmen/tools/ramecek.py",
+      "description": "Working highlight records are needs-review; validate previews before atomic working JSON write, no legacy canonical edits.",
+      "prs": [],
+      "sha256": "17c74401e7f87e3e058c539f4004c155d0a66ec0e5dae49947cda1098c0b07be"
+    },
+    "tools/slusne.py": {
+      "origin": "adapted upstream",
+      "upstream_commit": "2b657135f9dbe6843cc7515883252ad799fb40c9",
+      "upstream_path": "skills/rodokmen/tools/slusne.py",
+      "description": "PR53 plus grouped new archive hosts, check stop after waiting, uncertain-cause diagnostic, single-URL curl validation and Node bridge.",
+      "prs": [
+        53
+      ],
+      "sha256": "3fccfe8a61abf51ba7bfb544e11cc1cb6879728d19688f74f7ee5c5a7c51c912"
+    },
+    "tools/soal_zoomify.py": {
+      "origin": "adapted upstream",
+      "upstream_commit": "00ced9b1a33c532c87b83ee3b38ce58431948e4c",
+      "upstream_path": "skills/rodokmen/tools/soal_zoomify.py",
+      "description": "Shared guard/cache, host restriction, exact region crop and temp cleanup; removed unlimited-server claim.",
+      "prs": [
+        29,
+        60
+      ],
+      "sha256": "7f693501a5b6e2e693d8cefd0e2cf0f359661c0bc3952569c02bd5272485c257"
+    },
+    "tools/trebon.py": {
+      "origin": "adapted upstream",
+      "upstream_commit": "2b657135f9dbe6843cc7515883252ad799fb40c9",
+      "upstream_path": "skills/rodokmen/tools/trebon.py",
+      "description": "PR48 edge-tile composition plus PR60 cache; empty index inconclusive; safe keys and bounded pyramid/tile dimensions; catalogue candidates.",
+      "prs": [
+        48,
+        60
+      ],
+      "sha256": "635b24cbad269c1c4d533d3855b0a7385cd924bc6fa7920159566a8ed9b90699"
+    },
+    "tools/vademecum.py": {
+      "origin": "adapted upstream",
+      "upstream_commit": "00ced9b1a33c532c87b83ee3b38ce58431948e4c",
+      "upstream_path": "skills/rodokmen/tools/vademecum.py",
+      "description": "Shared guard; full identifiers and catalogue candidates; modern NA entrypoint.",
+      "prs": [
+        29
+      ],
+      "sha256": "0a6fdb0b3ea85af82bc1e4d012b8f3140fb803c41a749a65a48daf60145880a8"
+    },
+    "tools/vezni.py": {
+      "origin": "adapted upstream",
+      "upstream_commit": "00ced9b1a33c532c87b83ee3b38ce58431948e4c",
+      "upstream_path": "skills/rodokmen/tools/vezni.py",
+      "description": "Preserved upstream function with shared rate guard and compatible local import bootstrap where needed.",
+      "prs": [
+        29
+      ],
+      "sha256": "6558016910308e4cfe918c85643ad1bfebd842bf0c4fd0356c21f414a0d3e422"
+    },
+    "tools/vyrez.py": {
+      "origin": "adapted upstream",
+      "upstream_commit": "2b657135f9dbe6843cc7515883252ad799fb40c9",
+      "upstream_path": "skills/rodokmen/tools/vyrez.py",
+      "description": "Safe project output IDs, original/derivative separation and metadata stripping retained.",
+      "prs": [],
+      "sha256": "f044bd7647d18c3930c404b6b9a9e279a4d2688707deb924f0d2a0cd20664435"
+    },
+    "tests/test_ebadatelna.py": {
+      "origin": "adapted upstream test",
+      "upstream_commit": "82223f291b63a9381196028d1200295520e9a5b9",
+      "upstream_path": "skills/rodokmen/tests/test_ebadatelna.py",
+      "prs": [
+        47
+      ],
+      "description": "Adapted to local layout and shared-stop semantics; HTTP500 diagnostic fixture replaces HTTP503 retry fixture.",
+      "sha256": "e57e103d9e77791c19fe366274dfc62b7ac15cb528a3f7ca1770b412d840f9fc"
+    },
+    "tests/test_trebon.py": {
+      "origin": "adapted upstream test",
+      "upstream_commit": "b877a586f249b6aee495aaa22f05b2e2857df7a1",
+      "upstream_path": "skills/rodokmen/tests/test_trebon.py",
+      "prs": [
+        48
+      ],
+      "description": "Retained image composition regression for variable edge tiles and empty-index interpretation; local import path adapted.",
+      "sha256": "d089f9a82ee38a22b415b7c4ac6cecf0262b9e4b6336c8212f3e14efa53a6f45"
+    },
+    "tests/brzda_regression.py": {
+      "origin": "adapted upstream test",
+      "upstream_commit": "41c9333466c5a25b0e74cbf367a6b21434aa46c8",
+      "upstream_path": "tests/brzda/test_brzda.py",
+      "prs": [
+        53
+      ],
+      "description": "Tests adapted for the new paths and shared-stop behavior; loopback fixtures explicitly bypass environment proxies only for local synthetic servers.",
+      "sha256": "73c317bfea032b3fb13fbef42740125313de7797c515bd5bd5ed89bfe66ca328"
+    },
+    "tests/test_archive.py": {
+      "origin": "new synthesis / tests",
+      "basis": "MIT main, relevant PRs and publicly reported failure modes; excludes playbook.md",
+      "sha256": "f46d65ce5e8269e9cdf188339ec95f5de01ef760fd6767aa647bb4c317cae28c"
+    },
+    "reference/import-ftb.md": {
+      "origin": "new synthesis / tests",
+      "basis": "MIT main, relevant PRs and publicly reported failure modes; excludes playbook.md",
+      "sha256": "9fff7af6c887adbae111c703c8b413abdb71a40bc29dc431c91690677241e253"
+    },
+    "reference/metodika.md": {
+      "origin": "new synthesis / tests",
+      "basis": "MIT main, relevant PRs and publicly reported failure modes; excludes playbook.md",
+      "sha256": "c8dfacd6257d6890197084a8d37b8766c8a17f7ea6583fc81e2c6250eaac3ad5"
+    },
+    "reference/portaly.md": {
+      "origin": "new synthesis / tests",
+      "basis": "MIT main, relevant PRs and publicly reported failure modes; excludes playbook.md",
+      "sha256": "7d147eab45adb4c77bd8415b1382c92522dcc5a5500e8d33a1422173d146b710"
+    },
+    "reference/prameny-a-pribehy.md": {
+      "origin": "new synthesis / tests",
+      "basis": "MIT main, relevant PRs and publicly reported failure modes; excludes playbook.md",
+      "sha256": "c7c5c8dea449540b0cc295ea0eb159f31fea6a630a15c0d5e483ed9c64c08001"
+    }
+  },
+  "reviewed_prs": [
+    {
+      "number": 2,
+      "title": "Windows, nástroje pro SOA Plzeň a SOA Praha, záloha z MyHeritage",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/2",
+      "state": "merged",
+      "author": "svamberk",
+      "head_sha": "fc94b43e17b3008373683111b0dda6542b4b8b01",
+      "disposition": "already-in-main",
+      "decision": "Windows/UTF-8, Porta fontium, eBadatelna, FTB a základní opravy bezpečného zápisu již patří do main; archivní části zachovány a upraveny. Astro šablona nepřevzata.",
+      "archive_outputs": [
+        "tools/portafontium.py",
+        "tools/ebadatelna.py",
+        "tools/ftb_export.py",
+        "tools/ahmp_search.sh"
+      ]
+    },
+    {
+      "number": 7,
+      "title": "ftb_export: žádné odkazy na smazané osoby (fix #4)",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/7",
+      "state": "merged",
+      "author": "sarsonj",
+      "head_sha": "46322e38650cec733b6401cc129e8468909ef863",
+      "disposition": "already-in-main",
+      "decision": "FTB odkazy na odstraněné osoby jsou opravené v main; zachováno. Nový provenance sidecar navíc uchovává zdrojové citace a stránky.",
+      "archive_outputs": [
+        "tools/ftb_export.py",
+        "reference/import-ftb.md"
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Porta fontium: správný odkaz ke snímku, kontrola výřezu, ohled na server (fix #5)",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/8",
+      "state": "merged",
+      "author": "sarsonj",
+      "head_sha": "47194efb188858052a4eb42ebb81a1ccf4c6ffbc",
+      "disposition": "already-in-main",
+      "decision": "Správné párování snímků/permalinků Porta fontium a kontrola výřezů zachovány. Centrální stopka má přednost před starší automatickou opakovací logikou pro 429/503.",
+      "archive_outputs": [
+        "tools/portafontium.py"
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Aktualizace projektu: přepsat změněné šablony webu se zálohou (fix #9)",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/10",
+      "state": "merged",
+      "author": "sarsonj",
+      "head_sha": "5e2f380055b089d57186a8d8bb067cbd8b990b37",
+      "disposition": "alternative",
+      "decision": "Princip zálohy a rozlišování dat od šablony je užitečný. Aktualizátor původní Astro aplikace není kompatibilní s canonical aplikací Paměti rodu, proto není kopírován.",
+      "archive_outputs": []
+    },
+    {
+      "number": 13,
+      "title": "Stromový graf celé rodiny s rozbalováním větví a sourozenci",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/13",
+      "state": "open",
+      "author": "iahoeu",
+      "head_sha": "c1fd6d6315952ee3119d9ac4e23b7e857b810ab9",
+      "disposition": "alternative",
+      "decision": "Boční větve, sourozenci, potomci a více vztahů řeší canonical offline aplikace. Původní RODINA/osoby.py a Astro /strom nejsou přidány jako druhý datový model. PR #20 mění stejnou oblast jinak.",
+      "archive_outputs": []
+    },
+    {
+      "number": 19,
+      "title": "Stránky Statistiky a Domy, volitelné původní tvary jmen",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/19",
+      "state": "open",
+      "author": "barasoukup",
+      "head_sha": "4f83225d0b0e3ce0047523a7a028fe1ba657b732",
+      "disposition": "knowledge-only",
+      "decision": "Statistiky, původní podoby jmen a mapa domů jsou vhodné náměty; odlišujeme unikátní osoby od pozic a dům od parcely. Astro stránka, heuristické odhady rolí a mapová integrace vyžadující další projekt/data nejsou kopírovány.",
+      "archive_outputs": [
+        "reference/prameny-a-pribehy.md"
+      ]
+    },
+    {
+      "number": 20,
+      "title": "Návrh: stránka „Strom předků“ vedle vějíře",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/20",
+      "state": "open",
+      "author": "oskar-stierand",
+      "head_sha": "7a950b885c83aa6a57a56c9bd82f65bf64fc81b2",
+      "disposition": "alternative",
+      "decision": "Interaktivní rozbalovací strom má alternativu v canonical offline full-tree. Nekombinujeme konfliktní implementace /strom z #13 a #20.",
+      "archive_outputs": []
+    },
+    {
+      "number": 22,
+      "title": "ARON: odkaz na snímek otevře správný snímek, ne první (#18)",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/22",
+      "state": "open",
+      "author": "dplachetka",
+      "head_sha": "ee0a24059fc40453d99fb6ddbb54791a904a7271",
+      "disposition": "adapted",
+      "decision": "ARON odkaz vybírá TILE identifikátor ve správném DAO. Ručně sladěno s main, #29 a #60; chybějící či nejednoznačný TILE odmítá. Starý hromadný přepis osoby.py/svazky.json nebyl přidán.",
+      "archive_outputs": [
+        "tools/aron_img.py",
+        "tests/test_archive.py"
+      ]
+    },
+    {
+      "number": 23,
+      "title": "Významné osobnosti rodokmenu",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/23",
+      "state": "open",
+      "author": "oskar-stierand",
+      "head_sha": "afd4d2041da5498735df641107f31a62a094256b",
+      "disposition": "knowledge-only",
+      "decision": "Biografické směry a sekundární zdroje jsou užitečné; automatické prohlášení osobnosti podle titulu/role není důkaz. Původní osobnosti.py a Astro stránka nejsou přidány.",
+      "archive_outputs": [
+        "reference/prameny-a-pribehy.md"
+      ]
+    },
+    {
+      "number": 26,
+      "title": "SKILL.md: popis v uvozovkách, aby se skill načetl i v GitHub Copilot",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/26",
+      "state": "open",
+      "author": "vlapacek",
+      "head_sha": "83e82dbd9d5f11d15feabefeb6e2a1211270c606",
+      "disposition": "superseded",
+      "decision": "Escapování dvojtečky v YAML description řeší nové validované frontmatter. Stejný problém řeší #59; nejde o dvě funkce k přidání.",
+      "archive_outputs": []
+    },
+    {
+      "number": 28,
+      "title": "Tři doplňující skilly: vedení čtenářů, vedlejší nálezy, evangelické a moravské matriky",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/28",
+      "state": "open",
+      "author": "Wiruss38",
+      "head_sha": "aa8cfdf92e63f39b49e06946e49f4e1dcadb8d7d",
+      "disposition": "adapted-method",
+      "decision": "Převzaty principy malých dávek čtení, vedlejších stop a nekatolických pramenů. Odmítnuto souběžné stahování 6–8 pomocníky z jednoho archivu a neověřené univerzální sliby přesnosti/úspor.",
+      "archive_outputs": [
+        "reference/metodika.md"
+      ]
+    },
+    {
+      "number": 29,
+      "title": "Verze 0.8.0: nové archivy (Brno, Litoměřice, židovské matriky), vězni a oběti 2. světové války, smoke test",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/29",
+      "state": "open",
+      "author": "srameko",
+      "head_sha": "00ced9b1a33c532c87b83ee3b38ce58431948e4c",
+      "disposition": "adapted-subset",
+      "decision": "Přidány MZA, Litoměřice, VadeMeCum NA, Matricula, Brno, Arolsen, Terezín, Mauthausen a Holocaust.cz, sdílené obrazové funkce. Všechny nové síťové adaptéry doplněny společnou brzdou, protože větev vznikla před ní. Vynechány vlastní Astro/data změny, automatický síťový smoke test a obcházení browserových pravidel.",
+      "archive_outputs": [
+        "tools/mza.py",
+        "tools/litomerice.py",
+        "tools/vademecum.py",
+        "tools/matricula.py",
+        "tools/matricula_snimek.cjs",
+        "tools/brno_encyklopedie.py",
+        "tools/arolsen.py",
+        "tools/vezni.py",
+        "tools/mauthausen.py",
+        "tools/obeti.py",
+        "tools/obraz.py",
+        "tools/soal_zoomify.py",
+        "tools/kramerius.py"
+      ]
+    },
+    {
+      "number": 41,
+      "title": "Vylepšení z praxe: čas aktualizace na webu, Node 22.12, web ve vnitřn…",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/41",
+      "state": "open",
+      "author": "chalu72",
+      "head_sha": "e4ccaf08e1ac5363bf0311783d598f554b35403e",
+      "disposition": "knowledge-only",
+      "decision": "Zachovány podněty k datování výstupů, zaniklým obcím a MZA. MZA řeší adaptér #29. Node/Astro upgrade a LAN server se netýkají nové aplikace; LAN přístup není autentizace.",
+      "archive_outputs": [
+        "reference/portaly.md",
+        "reference/prameny-a-pribehy.md"
+      ]
+    },
+    {
+      "number": 42,
+      "title": "Podpora Codexu a OMP",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/42",
+      "state": "open",
+      "author": "xsigik",
+      "head_sha": "010f94a7e00f5d511cd70e473b9dafa4efe5ae91",
+      "disposition": "alternative",
+      "decision": "Nový skill používá přenosné instrukce, ne pouze Claude. Automatické přepisování klientských nastavení, obcházení schvalování a vynucení levného modelu nepřidáno; různá prostředí mají vlastní pravidla.",
+      "archive_outputs": []
+    },
+    {
+      "number": 46,
+      "title": "Zpřesnit předávání výzkumu a práci s GEDCOM",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/46",
+      "state": "open",
+      "author": "vlapacek",
+      "head_sha": "f119395502ce645113b6aa1fe5d8fcb69a414d9d",
+      "disposition": "adapted-method",
+      "decision": "Důsledné oddělení přepisu a shrnutí, zákaz falešných originálů a oddělené rodiny převzaty do metodiky. Opravy původního GEDCOM/osoby.py/číslovaného exportu se neaplikují na nový datový model; slouží jako regresní požadavky pro migraci.",
+      "archive_outputs": [
+        "reference/metodika.md",
+        "reference/import-ftb.md"
+      ]
+    },
+    {
+      "number": 47,
+      "title": "Zpřesnit pokyny pro archivy a hlásit opakované pokusy eBadatelny",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/47",
+      "state": "open",
+      "author": "vlapacek",
+      "head_sha": "82223f291b63a9381196028d1200295520e9a5b9",
+      "disposition": "adapted",
+      "decision": "eBadatelna dostala srozumitelné chyby a cílené testy. Timeout/500 lze opakovat, 403/429/503 musí respektovat centrální stopku. Opavské URL se berou ze skutečného záznamu, žádné hádání. Staré tvrzení, že MZA nemá nástroj, nahrazeno novým adaptérem.",
+      "archive_outputs": [
+        "tools/ebadatelna.py",
+        "tests/test_ebadatelna.py",
+        "reference/portaly.md"
+      ]
+    },
+    {
+      "number": 48,
+      "title": "Fix Třeboň image tile stitching",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/48",
+      "state": "open",
+      "author": "vlapacek",
+      "head_sha": "b877a586f249b6aee495aaa22f05b2e2857df7a1",
+      "disposition": "adapted",
+      "decision": "Třeboň skládá nestejně velké krajní dlaždice vlevo nahoru bez vnitřních mezer; spojeno s cache #60. Prázdný rejstřík se nehlásí jako prokázané nenalezení. Zachován skutečný obrazový test 7×5.",
+      "archive_outputs": [
+        "tools/trebon.py",
+        "tests/test_trebon.py",
+        "reference/portaly.md"
+      ]
+    },
+    {
+      "number": 49,
+      "title": "Support multiple family stories",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/49",
+      "state": "open",
+      "author": "vlapacek",
+      "head_sha": "0ddd863f33a2fcb2b4dd461faa2d662404efd572",
+      "disposition": "alternative",
+      "decision": "Více příběhů a kontrola soukromí jsou kompatibilní funkční cíle nové aplikace; původní Astro komponenty, závislosti a lockfile nejsou přeneseny.",
+      "archive_outputs": []
+    },
+    {
+      "number": 52,
+      "title": "Cursor: kompatibilita, AGENTS.md v šabloně a oprava Node ≥ 22.12",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/52",
+      "state": "open",
+      "author": "danielquisek",
+      "head_sha": "f748c0e3a9219e9af20bf17413ca0a17de88fa84",
+      "disposition": "alternative",
+      "decision": "Podpora různých agentů a zachování klientských souborů je dobrý princip. Nový skill nevytváří konkurenční CLAUDE/AGENTS soubory ani pevný Node/Astro setup; překryv s #42.",
+      "archive_outputs": []
+    },
+    {
+      "number": 53,
+      "title": "Brzda 0.6.0 na Windows: opravy tools/slusne.py, doplňky a regresní testy",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/53",
+      "state": "open",
+      "author": "svamberk",
+      "head_sha": "41c9333466c5a25b0e74cbf367a6b21434aa46c8",
+      "disposition": "adapted",
+      "decision": "Převzaty Windows CRLF, BASH_ENV, souběh vláken, podprocesy a stupňované stopky. Doplněna kontrola stopky po čekání, srozumitelná nejistá příčina a most pro Node. Klientský hook nepřibalen: samotný PR uvádí selhání Windows hookových testů.",
+      "archive_outputs": [
+        "tools/slusne.py",
+        "tests/brzda_regression.py",
+        "tests/test_archive.py"
+      ]
+    },
+    {
+      "number": 55,
+      "title": "Vějíř: plynulý posun a přibližování (hardwarová akcelerace, automaticky u velkých vějířů)",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/55",
+      "state": "open",
+      "author": "altaraneu",
+      "head_sha": "0291562c9ef208dde5af5532c69581c3b28c3744",
+      "disposition": "deferred",
+      "decision": "Canvas vějíř s SVG hit testem a matematické testy jsou hodnotná optimalizace konkrétní Astro komponenty. Canonical aplikace má vlastní vykreslování; přenos vyžaduje profilování a přizpůsobení, nikoli slepé kopírování.",
+      "archive_outputs": []
+    },
+    {
+      "number": 56,
+      "title": "nginx: map_hash_bucket_size 128 pro přihlašovací SHA-256 hash (fix 502 v Dockeru/CapRoveru)",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/56",
+      "state": "open",
+      "author": "mpeterka",
+      "head_sha": "12bb588ed675f8be874cd672d16093251771d15b",
+      "disposition": "not-applicable",
+      "decision": "Nginx map_hash_bucket_size oprava patří do původního způsobu nasazení. Nový skill nenasazuje nginx jako výchozí funkci, proto nepřebírá serverový soubor.",
+      "archive_outputs": []
+    },
+    {
+      "number": 59,
+      "title": "Fix: YAML sekce SKILL.md nyní plně parsovatelná dle standardu YAML",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/59",
+      "state": "open",
+      "author": "aleqcz",
+      "head_sha": "a76d85d700a3a4b6b5a35e99f8f028ba0a58411a",
+      "disposition": "duplicate",
+      "decision": "Stejný YAML description problém jako #26. Nové frontmatter je vlastní a validované, původní patch nepřidává další funkci.",
+      "archive_outputs": []
+    },
+    {
+      "number": 60,
+      "title": "Sdílená cache snímků: stejný snímek se z archivu stahuje jen jednou",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/60",
+      "state": "open",
+      "author": "AdamFiser",
+      "head_sha": "b49b732bb9a18c9fbc5c2de57ac356b12e8277f2",
+      "disposition": "adapted-rewritten",
+      "decision": "Cache zapojena do ARON, AHMP, Třeboně, Porta fontium, eBadatelny a Zoomify. Jádro přepsáno: zámek vláken i procesů pro jediný fetch, unikátní dočasné soubory, bezpečné klíče, atomické dokončení a úklid i při SystemExit. Řeší závody původního PID temp souboru.",
+      "archive_outputs": [
+        "tools/cache.py",
+        "tools/aron_img.py",
+        "tools/ahmp_scan.py",
+        "tools/trebon.py",
+        "tools/portafontium.py",
+        "tools/ebadatelna.py",
+        "tools/soal_zoomify.py",
+        "tests/test_archive.py"
+      ]
+    },
+    {
+      "number": 62,
+      "title": "portaly.md: písemnosti vrchnosti, zemské desky a vodnimlyny.cz",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/62",
+      "state": "open",
+      "author": "mandmi92",
+      "head_sha": "6470aabf297f558ca7c69d2c7bc8a65993e9df65",
+      "disposition": "adapted-method",
+      "decision": "Rozšířeny gruntovní, pozemkové, sirotčí, svatební a vrchnostenské prameny i návaznost na dějiny domu. Jde o metodické směry s citováním, ne automaticky doložená příbuzenství.",
+      "archive_outputs": [
+        "reference/prameny-a-pribehy.md",
+        "reference/metodika.md"
+      ]
+    }
+  ],
+  "issue25": [
+    {
+      "risk": "Zastaralé publikované JPG po odstranění dokladu; neúspěšný build kontaminuje další build.",
+      "response": "Původní export_web pipeline nepřevzata. Canonical publikační export musí sestavovat oddělený nový výstup a filtrovat také média."
+    },
+    {
+      "risk": "Path traversal identifikátorů a kolize slugů, včetně přepsání kořenové osoby.",
+      "response": "Archivní klíče, project_file a cache validují cestu a symlinky. Nová canonical ID nesmějí vznikat pouze ze jména/roku; migrace má zachovat původní ID a hlásit konflikt."
+    },
+    {
+      "risk": "GEDCOM ancestry cyklus nebo SAME cyklus/dangling alias; legitimní opakovaný předek není cyklus.",
+      "response": "Původní načítání GEDCOM/osoby.py vynecháno. Parent vytváří bezpečnou migraci s explicitními varováními. Ověřit graf po cestách, nikoli zamítnout každé opakování."
+    },
+    {
+      "risk": "První FAMC bez rozlišení adopce a narození; více svazků a společné děti se při přepočtu míchají.",
+      "response": "Zachovat typ vztahu a alternativy. Canonical data mají být zdrojová, pohledy odvozené; žádný import nesmí tiše vybrat první rodinu jako biologickou."
+    },
+    {
+      "risk": "FTB ztrácí page/fact citation a některé specifické vztahy.",
+      "response": "Přidán JSON provenance sidecar s úplnými extrahovanými citation_details včetně stránky a původního vlastníka. GEDCOM stále označen jako částečný export, ne bezztrátový roundtrip."
+    },
+    {
+      "risk": "BEF/ABT datum se stane přesným rokem; křest/narození a pohřeb/úmrtí se zamění.",
+      "response": "Metodika a canonical migrace mají zachovat typ události a kvalifikátor. Původní ztrátový renderer nepřevzat."
+    },
+    {
+      "risk": "Soukromí vypouští známá pole, ale nechává kontakty ve volném textu a médiích.",
+      "response": "FTB dokumentace výslovně popisuje neanonymizovaný text a nespolehlivé is_alive. Nové publikování vyžaduje oddělenou redakci všech vrstev."
+    },
+    {
+      "risk": "overit.py vypíše cestu po selhání ImageMagick, nesprávná velikost/crop.",
+      "response": "Přepsán s check=True, kontrolou výstupu, omezením 1900×1900 a validací souřadnic. Regrese ověřuje, že chyba nehlásí úspěch."
+    },
+    {
+      "risk": "ARON částečný výřez odpovídá dlaždicím, nikoli přesným požadovaným souřadnicím.",
+      "response": "Ořez po složení s floor/ceil, jednotkový test 0.1–0.2 na 256 px kontroluje 27×27."
+    },
+    {
+      "risk": "Mapový regex vynechá roky 2000+, coverage míchá unikátní osoby s pozicemi, titul vějíře může nadhodnocovat generace.",
+      "response": "Původní Astro mapový/statistický kód nepřevzat. Dokumentované definice metrik a požadavek zachovat novější data."
+    },
+    {
+      "risk": "Validátor struktur je zaměněn za důkaz genealogické pravdy a chronologie.",
+      "response": "Metodika odděluje čitelnost, citaci, ztotožnění a vztah. Automatický test nepotvrzuje rodinnou vazbu."
+    },
+    {
+      "risk": "Zaměnění lhůty nahlížení do zápisu a předání celé knihy.",
+      "response": "Starý text odstraněn. Aktuální právní formulace a primární zdroj jsou v hlavní metodice koordinátora; archivní reference rozlišuje jednotlivý zápis, celou knihu a online dostupnost."
+    },
+    {
+      "risk": "Příběh dovodí početí ze 267 dnů od svatby nebo přisoudí příčinu bez pramene.",
+      "response": "Výslovně vyloučeno v pramenech/příbězích; doba těhotenství ani blízkost dat neprokazuje konkrétní děj."
+    },
+    {
+      "risk": "Node 20 proti požadavkům Astro lockfile a audit závislostí.",
+      "response": "Astro a jeho lockfile vynechány. Lokální nález závislosti je riziko aktualizace, ne důkaz zneužití statické aplikace."
+    }
+  ],
+  "validation": {
+    "environment": {
+      "os": "Linux",
+      "python": "3.12",
+      "node": "24",
+      "imagemagick": "6"
+    },
+    "unit_regression_tests": {
+      "passed": 14,
+      "failed": 0,
+      "command": "python3 -m unittest discover -s tests -p 'test_*.py' -v",
+      "cases": [
+        "cache: 6 threads fetch once",
+        "cache: 4 processes fetch once",
+        "cache: SystemExit cleanup",
+        "keys and symlink containment",
+        "HTTP 503 shared stop state and diagnostic",
+        "queued request obeys ban set while waiting",
+        "ARON TILE matches DAO",
+        "ARON exact fractional crop via actual ImageMagick",
+        "unverified catalogue JSON contract",
+        "FTB provenance sidecar includes page and caveats",
+        "overit failure never reports success",
+        "Trebon 7×5 edge tile composition",
+        "Trebon empty index is inconclusive",
+        "eBadatelna retry diagnostics (HTTP 500 and timeout)"
+      ]
+    },
+    "slusne_regression": {
+      "cases_exercised": 24,
+      "passed_in_full_run": 23,
+      "passed_in_isolated_environment_corrected_retest": 1,
+      "single_clean_full_run": false,
+      "environment_correction": "Explicit lowercase and uppercase no_proxy include loopback 127.0.0.1–4. One connection-failure case originally hit the environment proxy; its isolated direct-localhost rerun passed.",
+      "scope": "Local HTTP fixtures only: multiprocess/thread rate limits, HTTP stop states, curl/bash/subprocess handling, HTML denial, progressive bans."
+    },
+    "syntax": [
+      "python3 -m compileall -q tools",
+      "node --check tools/matricula_snimek.cjs",
+      "bash -n tools/ahmp_search.sh"
+    ],
+    "not_tested": [
+      "live portal compatibility and availability",
+      "Windows/macOS execution of adapted files",
+      "real FTB databases across versions",
+      "Matricula Playwright live image capture",
+      "archive-wide bulk search",
+      "original Astro build or nginx deployment"
+    ]
+  },
+  "exclusions": [
+    "reference/playbook.md: unknown license and author",
+    "original Astro template, package lock and nginx/deployment scripts: different canonical app",
+    "original executable osoby.py readers and GEDCOM-to-code exporter: different data model and unsafe executable input route",
+    "client-specific hook: known Windows failures and incompatible external runtime rules",
+    "automatic live multi-archive smoke test: unnecessary requests and uncertain current portal interfaces",
+    "scraped family records, archive images, private sample trees: no default real-person dataset included"
+  ],
+  "notes": [
+    "Archive catalogue commands output unverified candidates and never write canonical genealogy data.",
+    "Source code MIT license does not grant rights to all remotely accessed archive images.",
+    "This source manifest records adaptation, not upstream merge approval or live portal certification."
+  ]
+}

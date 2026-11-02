@@ -1,0 +1,1052 @@
+{
+  "repository": "https://github.com/thejanhromek/pamet-rodu",
+  "audited_at": "2026-11-02T09:17:17.189267+00:00",
+  "head": "d40b6512efb247859773f4cd4e273a1299d26f22",
+  "branch": "main",
+  "pull_requests": {
+    "complete": true,
+    "all": 0,
+    "open": 0,
+    "closed_unmerged": 0,
+    "merged": 0,
+    "items": [],
+    "pagination": [
+      {
+        "url": "https://api.github.com/repos/thejanhromek/pamet-rodu/pulls?state=all&per_page=100&page=1",
+        "count": 0,
+        "link": ""
+      }
+    ]
+  },
+  "issues": {
+    "complete": true,
+    "all": 0,
+    "items": []
+  },
+  "branches": [
+    {
+      "name": "main",
+      "commit": {
+        "sha": "d40b6512efb247859773f4cd4e273a1299d26f22",
+        "url": "https://api.github.com/repos/thejanhromek/pamet-rodu/commits/d40b6512efb247859773f4cd4e273a1299d26f22"
+      },
+      "protected": false
+    }
+  ],
+  "license": {
+    "project": "MIT",
+    "copyright": "Copyright (c) 2026 autor projektu Rodová kronika (https://janhromek.com)",
+    "third_party": {
+      "Leaflet": "BSD-2-Clause",
+      "Leaflet.markercluster": "MIT",
+      "ELK.js": "EPL-2.0",
+      "Natural Earth": "public domain",
+      "Shared cM Project 4.0": "CC BY 4.0"
+    }
+  },
+  "history": [
+    {
+      "sha": "d40b6512efb247859773f4cd4e273a1299d26f22",
+      "date": "2026-10-28",
+      "subject": "README: krátký přehled, hlavní přednosti a výsledky jedné kroniky"
+    },
+    {
+      "sha": "05dd41cb656c179d85b2f38c6c57a88390aa9bbc",
+      "date": "2026-10-28",
+      "subject": "Přenos oprav z rodinné kroniky"
+    },
+    {
+      "sha": "0c84bdd40ae0dbbb4da3ad6af530d0f4261fa979",
+      "date": "2026-10-18",
+      "subject": "Úvodní grafika README vykreslená z HTML/CSS (docs/img/hero.html)"
+    },
+    {
+      "sha": "786ee7f37abbf4556c37874802fdca1d9d204262",
+      "date": "2026-10-18",
+      "subject": "README a dovednosti: kronika na GitHub Pages a kniha páru"
+    },
+    {
+      "sha": "45add14bb9836ea7b8998e3d05c4e395b6f4dbea",
+      "date": "2026-10-18",
+      "subject": "Přenos funkcí z rodinné kroniky: GitHub Pages a kniha páru"
+    },
+    {
+      "sha": "f5274c961e4d11a9270173051535233794aec37c",
+      "date": "2026-10-18",
+      "subject": "Název repozitáře: pamet-rodu"
+    },
+    {
+      "sha": "3438262aebd7dda8df270fe659b2c35c68f98190",
+      "date": "2026-10-18",
+      "subject": "Ukázka pro nové funkce, README, AGENTS a dovednosti"
+    },
+    {
+      "sha": "8c65dfb93a44bc4219af545007f36fe593070697",
+      "date": "2026-10-18",
+      "subject": "Přenos funkcí z rodinné kroniky (f38a7bb)"
+    },
+    {
+      "sha": "c2d891c882d0417e66bc025bef447579e837e20f",
+      "date": "2026-10-18",
+      "subject": "Pokyny pro AI asistenta: start z odkazu na repozitář"
+    },
+    {
+      "sha": "85b78f0146a3a2e502cabe7b947ffa1781b6f347",
+      "date": "2026-10-18",
+      "subject": "Licence MIT s odkazem na web autora"
+    },
+    {
+      "sha": "e3f036fdbf55933ec38d0aafb3b6d50ad6f869a6",
+      "date": "2026-10-18",
+      "subject": "Rodová kronika – veřejná šablona s ukázkovým rodem"
+    }
+  ],
+  "inventory": {
+    "tracked_files": 160,
+    "tracked_bytes": 8166572,
+    "node_helpers": 25,
+    "browser_modules": 23,
+    "skills": 6,
+    "unit_test_files": 23,
+    "sample_people": 14,
+    "history_events": 41,
+    "given_name_groups": 126,
+    "map_features": 242
+  },
+  "files": [
+    {
+      "path": ".claude/skills/kontrola-soukromi/SKILL.md",
+      "bytes": 3087,
+      "sha256": "3ad0353c750f4087f4c9a3a2a0fdb51d90f759859525bd1788e271fcf92706f7"
+    },
+    {
+      "path": ".claude/skills/novy-nalez/SKILL.md",
+      "bytes": 4325,
+      "sha256": "27a420a2871fab08b98c2f44aa18eff039c7941bd63525f91489c91dd01cc755"
+    },
+    {
+      "path": ".claude/skills/prvni-spusteni/SKILL.md",
+      "bytes": 3540,
+      "sha256": "b924771263e2d5d6843c2daffb2f67dc36d966336a508c3d90ec354fc451fc6a"
+    },
+    {
+      "path": ".claude/skills/uvodni-rozhovor/SKILL.md",
+      "bytes": 3382,
+      "sha256": "ae68ce2129008e532aa464352ba6aadbb49c6732eff53fb920bdfc87ce25b1a1"
+    },
+    {
+      "path": ".claude/skills/vydani-a-sdileni/SKILL.md",
+      "bytes": 3443,
+      "sha256": "6d8e129ed5de4c5d724e85f33cee4d7cc938da53eaad16f6078445960a262dd2"
+    },
+    {
+      "path": ".claude/skills/zpracuj-rozhovor/SKILL.md",
+      "bytes": 3289,
+      "sha256": "1093a39668222a49f45d453a57ffb1d78d3d15c4d737298ea50b13bd6b819590"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 79,
+      "sha256": "848ce440bc42d0efdcf45451bffc511642c75284c2446033e32baeabe77a96c1"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 502,
+      "sha256": "8492655260d561210847fef83ebafce831110bfc5f1f49f6a8e6f5cb9a178a2f"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 6889,
+      "sha256": "eeae09dfcdfb8ee00b2f238de421c32d9b6019b080f58774f91251a630fff3b2"
+    },
+    {
+      "path": "CLAUDE.md",
+      "bytes": 11,
+      "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49"
+    },
+    {
+      "path": "DESIGN.md",
+      "bytes": 12839,
+      "sha256": "57dc6beb7bbc3a1c0a2722f5186577b4c50b661c938fdb1e7a63190340b010d7"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1332,
+      "sha256": "e5bc1c7feff6c7e9f646ed7dbadd318e889f12c6daff867559b76d042346aaff"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6280,
+      "sha256": "4de04680e41d154829ad040f59fc345572195ccb2b1cd7bebbd4cd8bb755dfe2"
+    },
+    {
+      "path": "assets/interviews/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "assets/optimized/statek-lipova-lhota-ilustrace.webp",
+      "bytes": 9480,
+      "sha256": "8fe226c8408b515f8b98ed214364a0c36f14354ec1520cbce8211a77099d5e69"
+    },
+    {
+      "path": "assets/source/statek-lipova-lhota-ilustrace.png",
+      "bytes": 330881,
+      "sha256": "838905cdde59cc27272d3828c957237e67a9ec072b972488a0a4e93e8b76a73d"
+    },
+    {
+      "path": "docs/data-contract.md",
+      "bytes": 20569,
+      "sha256": "c3824b3e66b33a93afe5364f5262d4aac88e6bba019a57f24ab3f88a16187a29"
+    },
+    {
+      "path": "docs/dotaznik-pro-pametniky.md",
+      "bytes": 3007,
+      "sha256": "ffcdd7811294f0b7bd64567b73ca995feec5c72100cc756d9115d6bbbe5baa30"
+    },
+    {
+      "path": "docs/genealogicky-vyzkum-postupy.md",
+      "bytes": 7694,
+      "sha256": "8cf92ff68b9e9615d692da93650a4b1e247920e580f1754282a620438fbdea60"
+    },
+    {
+      "path": "docs/img/hero.html",
+      "bytes": 9087,
+      "sha256": "8f886ac9e77a4a0add77dc0867c2d85cfe2c0c7a4b4aa684bb69e311b355047a"
+    },
+    {
+      "path": "docs/img/hero.png",
+      "bytes": 609942,
+      "sha256": "ece5b23e588ebd12caa1d40f6779d0066d35ae9e95f139c5776340582481a163"
+    },
+    {
+      "path": "docs/navod.md",
+      "bytes": 13902,
+      "sha256": "ba39d063c3bc58b7881e37d70e24bb5b01d863840f114d09cc6cef2312465bbb"
+    },
+    {
+      "path": "docs/prenos-funkci.md",
+      "bytes": 3037,
+      "sha256": "3cb861c6f72bd69c71c5c89d9c8d3858d0b79ba3d303a98d2f41119efd1d0827"
+    },
+    {
+      "path": "docs/pruvodce-vyzkumem.md",
+      "bytes": 7893,
+      "sha256": "863f873afeb3837820927785a23ee8663b6fc5d12203d93c7fd86f3e93490125"
+    },
+    {
+      "path": "docs/souhlas-s-nahravanim.md",
+      "bytes": 1702,
+      "sha256": "66002799a291fa8a672879b7c07d83b69daf467843dca74d8e12f88a93d54475"
+    },
+    {
+      "path": "docs/soukromi-a-sdileni.md",
+      "bytes": 5087,
+      "sha256": "a73227f0a344b40c9bd612328b36a222135d252a68cae03950f40480b12f6356"
+    },
+    {
+      "path": "examples/ukazka/family-edition.json",
+      "bytes": 738,
+      "sha256": "654899eff85af5a744d15d6b6285e9eb22fa5340ddc139e7e3135a5a1a76c054"
+    },
+    {
+      "path": "examples/ukazka/gazetteer.json",
+      "bytes": 2841,
+      "sha256": "4e44b06bb5a9343d3aa72f6b53b9889756423c2a6ee3a4455742d04cb4c8cc8d"
+    },
+    {
+      "path": "examples/ukazka/genealogy.json",
+      "bytes": 31382,
+      "sha256": "a02712c832f7298623ce2caf404c7e07f08d97261d282a5e9064f4e3754601cf"
+    },
+    {
+      "path": "examples/ukazka/history-local.json",
+      "bytes": 1395,
+      "sha256": "b9c056dff7975703d78c38b266c053865ddef36c7ba13035f05a68b62ba948a7"
+    },
+    {
+      "path": "examples/ukazka/media-notes.json",
+      "bytes": 1290,
+      "sha256": "d0e92aa86d14f3399f64948be6c56b3a9c7571372db73893baa440dc17054c0f"
+    },
+    {
+      "path": "examples/ukazka/registers.json",
+      "bytes": 2287,
+      "sha256": "488d8cf608c239ecef19a1545c6cdbb1ebf8afaea1a587955de5f7ead86c624a"
+    },
+    {
+      "path": "package.json",
+      "bytes": 475,
+      "sha256": "2f18aec86d8ab26c6af754fe3b5538b94055368a45e0114d82ceb9ae61136579"
+    },
+    {
+      "path": "schema/kronika.schema.json",
+      "bytes": 13180,
+      "sha256": "2513751afacd1981ed68be706f1baad823c09111b189038af47f64baf340246f"
+    },
+    {
+      "path": "scripts/apply-changes.mjs",
+      "bytes": 5792,
+      "sha256": "08f5f73235f3f99d7e43aaa65fda2b4c162d3743cb7d5494ad3aab3ab8058d75"
+    },
+    {
+      "path": "scripts/build-audiobook.mjs",
+      "bytes": 11500,
+      "sha256": "9fd3dee1c33bc78f7dee791866cad1c09e384f73f4abb098a549d5584c0beb74"
+    },
+    {
+      "path": "scripts/build-book.mjs",
+      "bytes": 26210,
+      "sha256": "9b55be3672a5faf73cc59103745d5884d92e1da32b9a60123c57f5834e75b90c"
+    },
+    {
+      "path": "scripts/build.mjs",
+      "bytes": 7101,
+      "sha256": "5d2ae58f2f100b1005cf7dc86d33b488815c4b7c11a426ff39800a345f38c351"
+    },
+    {
+      "path": "scripts/family-edition.mjs",
+      "bytes": 9855,
+      "sha256": "7c74a2a606075950826cc781794bb24f3037cb54f00003e0a27271261b069be6"
+    },
+    {
+      "path": "scripts/gedcom.mjs",
+      "bytes": 5141,
+      "sha256": "678da421f0e7134179bc47e4cee688fefbe31a47cc04af0f5838ea1ff8034fde"
+    },
+    {
+      "path": "scripts/import-interview.mjs",
+      "bytes": 1871,
+      "sha256": "d2de731cc24cf758d796cedc1b7871a94ebdc0be45827796f124417bb986f910"
+    },
+    {
+      "path": "scripts/import-suggestions.mjs",
+      "bytes": 6014,
+      "sha256": "92b56ed6a4dc5bae48162e4ac82a0e34f3fe872e4149dcfcd2a008820c27a98b"
+    },
+    {
+      "path": "scripts/init.mjs",
+      "bytes": 7888,
+      "sha256": "2c1986426e33345bd22d826be973de53492db4acd6942df0837586aa83b82d14"
+    },
+    {
+      "path": "scripts/lib/cdp.mjs",
+      "bytes": 10556,
+      "sha256": "a63fbece173a3f2bf7e191bc565f39fd66be937a2d8d4003f0242c1d3f6274bb"
+    },
+    {
+      "path": "scripts/lib/edition-history.mjs",
+      "bytes": 1655,
+      "sha256": "9e42e2bf9da7d3cc5c95c00c87e3db81699757dfd3a8c9e47366bf678a1cc909"
+    },
+    {
+      "path": "scripts/lib/interview-words.mjs",
+      "bytes": 1970,
+      "sha256": "c16496afb4f559e221bc36f07bf8a8d02cefc57ea06ef02ddb53f6b1bf18f092"
+    },
+    {
+      "path": "scripts/lib/light-media.mjs",
+      "bytes": 1455,
+      "sha256": "2e8daa88cc5ad7d166b22d821fdd1eedcc11cde769f0e56b53920cf363cedbda"
+    },
+    {
+      "path": "scripts/lib/load-dataset.mjs",
+      "bytes": 2948,
+      "sha256": "5782a1f9cbfc2e02f3d0962b35876ef40e0733786a8869da49d2dcb483f61085"
+    },
+    {
+      "path": "scripts/lib/png.mjs",
+      "bytes": 6735,
+      "sha256": "34613958c5a1a948fd45ed9cd636835754cb75b71a10ca31bcd338c4b09e7d32"
+    },
+    {
+      "path": "scripts/lib/privacy.mjs",
+      "bytes": 5372,
+      "sha256": "ae4763581a80fee3eb78ba30aebe0109c4731e4095f316df5acdb8b3f446ff26"
+    },
+    {
+      "path": "scripts/lib/simplify-geo.mjs",
+      "bytes": 2763,
+      "sha256": "b2ebd947d3c7dfdf8542d92ea6646d70568b16f9b67648372a0e252480edecaa"
+    },
+    {
+      "path": "scripts/lib/validate-data.mjs",
+      "bytes": 1270,
+      "sha256": "988906bb8b0ad255d5583992394a5d73cc49564528d1ced9fbc1603e43c356c6"
+    },
+    {
+      "path": "scripts/make-clips.mjs",
+      "bytes": 3489,
+      "sha256": "f100fd1e17ebc093dbec04236c2f35f453989c3d094076ea6d7b5acf94ff0260"
+    },
+    {
+      "path": "scripts/optimize-media.sh",
+      "bytes": 390,
+      "sha256": "851646da521af06caeb23d1d2eb86801af64217d0788baab4e93d90c9219ff76"
+    },
+    {
+      "path": "scripts/protect.mjs",
+      "bytes": 6560,
+      "sha256": "f1a227feaf6b0a40ba065d885678400a0f67735e4b773c722dd5ecd1f36a943d"
+    },
+    {
+      "path": "scripts/publish-pages.mjs",
+      "bytes": 6806,
+      "sha256": "921a7be576a3c7f0743146c66bc09d9ff3b98d6914ee0621ff6d94661b3a5e62"
+    },
+    {
+      "path": "scripts/questionnaire.mjs",
+      "bytes": 3778,
+      "sha256": "0673d1708bc5d8e5d70aa666988ca966e1bbbbdaa6654be36e2581b0ae1db5a8"
+    },
+    {
+      "path": "scripts/registers-from-sources.mjs",
+      "bytes": 2487,
+      "sha256": "5aab5418d74c86aad05d442d9bf230674f8ba8e0a23680d4186ac364cb9227fe"
+    },
+    {
+      "path": "scripts/release.mjs",
+      "bytes": 7024,
+      "sha256": "d6a3188d73130c598be893acfe580dc24dbe15fb85db976bb9d058822288db9f"
+    },
+    {
+      "path": "scripts/transcribe.py",
+      "bytes": 5898,
+      "sha256": "a59f8a0bfc54cbd3c5b9d09ce7bdfcd45eb086fb20acd3a4d5de1caf49c44d99"
+    },
+    {
+      "path": "scripts/visual-test.mjs",
+      "bytes": 11974,
+      "sha256": "587706239b0a07b49c2dd365ca839fb98f8d640defa7811fb7fe248183981fa2"
+    },
+    {
+      "path": "src/app.js",
+      "bytes": 73588,
+      "sha256": "bfdf8280f0d0d5702d3bf1c33364227a570498a74239cd7469dad3762dd7a0e8"
+    },
+    {
+      "path": "src/changes.js",
+      "bytes": 7612,
+      "sha256": "2250c6114c3c7debc5f6c1cd89ec666c92b17cb0fa689dcd657e89540e8fe0e0"
+    },
+    {
+      "path": "src/checks.js",
+      "bytes": 14420,
+      "sha256": "e5824a6e7c4c5b5cdbec67e9a4c9349c37a1a38c12be94d5b95b11580a80a971"
+    },
+    {
+      "path": "src/components.js",
+      "bytes": 12655,
+      "sha256": "6bfc2c03433e8066b956b60cb9ed85e19c2817ad6d432b27ab8f6882a72e8ef8"
+    },
+    {
+      "path": "src/data/family-edition.json",
+      "bytes": 738,
+      "sha256": "654899eff85af5a744d15d6b6285e9eb22fa5340ddc139e7e3135a5a1a76c054"
+    },
+    {
+      "path": "src/data/gazetteer.json",
+      "bytes": 2841,
+      "sha256": "4e44b06bb5a9343d3aa72f6b53b9889756423c2a6ee3a4455742d04cb4c8cc8d"
+    },
+    {
+      "path": "src/data/genealogy.json",
+      "bytes": 31382,
+      "sha256": "a02712c832f7298623ce2caf404c7e07f08d97261d282a5e9064f4e3754601cf"
+    },
+    {
+      "path": "src/data/given-names.json",
+      "bytes": 11351,
+      "sha256": "d33ccfe150723505961ad9087dc4a4caba2c8632bfa469eff8e068b8d762739e"
+    },
+    {
+      "path": "src/data/history-local.json",
+      "bytes": 1395,
+      "sha256": "b9c056dff7975703d78c38b266c053865ddef36c7ba13035f05a68b62ba948a7"
+    },
+    {
+      "path": "src/data/history.json",
+      "bytes": 20812,
+      "sha256": "1ade64f6aeb9ef3239d09dc78074e32e543a9297e3d40f502c73eb697a2d204b"
+    },
+    {
+      "path": "src/data/media-notes.json",
+      "bytes": 1290,
+      "sha256": "d0e92aa86d14f3399f64948be6c56b3a9c7571372db73893baa440dc17054c0f"
+    },
+    {
+      "path": "src/data/registers.json",
+      "bytes": 2287,
+      "sha256": "488d8cf608c239ecef19a1545c6cdbb1ebf8afaea1a587955de5f7ead86c624a"
+    },
+    {
+      "path": "src/data/world-outline.json",
+      "bytes": 1873973,
+      "sha256": "03075a8887d55365fba3faf38f1dc840d0a3b09d85d4a48107752ec9ad99d26b"
+    },
+    {
+      "path": "src/dna.js",
+      "bytes": 13573,
+      "sha256": "26a76fa1f0a20932b1f49db25d304e1e9af1f879d9495495b01c07ef4a1e7efb"
+    },
+    {
+      "path": "src/edition-diff.js",
+      "bytes": 2809,
+      "sha256": "17f2c6fcb151684927ea75afbd2af9e5683ffeb7346797b8afcafd8fb64f816a"
+    },
+    {
+      "path": "src/family-views.js",
+      "bytes": 30224,
+      "sha256": "dfb43eb1b1ed3b11d1a2b4646109f2e5720d9bd0eac87c1402818ccf45a888bd"
+    },
+    {
+      "path": "src/full-tree.js",
+      "bytes": 78290,
+      "sha256": "cad3f5385cd14eefb9b6be00c488ac96129847f581e323caaf427187b6785452"
+    },
+    {
+      "path": "src/gedcom.js",
+      "bytes": 47437,
+      "sha256": "95c77f60e954526c34d22223d41cfc5d4cd1d387c1d3ded01a4b9c7ad281b26d"
+    },
+    {
+      "path": "src/history.js",
+      "bytes": 11112,
+      "sha256": "c78d9ffff605d0e3a59c91b5c66d8d8c53974c52d94c149701b5373af7236a1d"
+    },
+    {
+      "path": "src/kinship.js",
+      "bytes": 4477,
+      "sha256": "583fee30e50000fa05339393fec5e64219e1d1ab36396a94f150bccd95ea89f4"
+    },
+    {
+      "path": "src/map.js",
+      "bytes": 26113,
+      "sha256": "3d1459fbd7f25145134b6bc84df0d92ce286b626c4ec21680ff653e14455b880"
+    },
+    {
+      "path": "src/model.js",
+      "bytes": 26865,
+      "sha256": "bb2f8e08f855cb78bbb3a5f1b08baf276b4f230ff5a1393c1642c4250a9239b6"
+    },
+    {
+      "path": "src/names.js",
+      "bytes": 5160,
+      "sha256": "4e8f67c5281236e82cf7acb59734bc264abc50e49430b18ce8bb0de608f470a0"
+    },
+    {
+      "path": "src/presentation.js",
+      "bytes": 13333,
+      "sha256": "ecc873c7f17811ffb59a2987d39692ed77fbfc4e1a094eedd92c74948aab588b"
+    },
+    {
+      "path": "src/questions.js",
+      "bytes": 4873,
+      "sha256": "1c0e881a0f8571a35f5e5f45aced0c3c0dc117342290c6d6ba2d39efcfdf9431"
+    },
+    {
+      "path": "src/research-queue.js",
+      "bytes": 12666,
+      "sha256": "4a7d1c71b4a48ed5317b4db4ad0ae2c2165b5a5e0c8dd18ecb5400254f221182"
+    },
+    {
+      "path": "src/research-views.js",
+      "bytes": 56963,
+      "sha256": "dfeeae18ac89ce15fdfc4bb353d6feb01f590efe26ad3cb1c88195bf4203fe42"
+    },
+    {
+      "path": "src/schema-lite.js",
+      "bytes": 4994,
+      "sha256": "0eb681d7b662ea1205fbb09cfb8f9d6377c553a17806a0f28ef42268b457d883"
+    },
+    {
+      "path": "src/stats.js",
+      "bytes": 4415,
+      "sha256": "8ff6b236c7bb636715d1395ff16a3f066fafdb735f4537773a002d4cec36e044"
+    },
+    {
+      "path": "src/story.js",
+      "bytes": 11618,
+      "sha256": "dae6247bb902a565e0fea31dfe18ab2ef658c8a9d0e0e271503dad5f817d2e1c"
+    },
+    {
+      "path": "src/styles.css",
+      "bytes": 94891,
+      "sha256": "073f788895360b27eb7fa1a47b43f142944f4684edad2dfa9adb6182f9fcb11e"
+    },
+    {
+      "path": "src/template.html",
+      "bytes": 4084,
+      "sha256": "42a698f22f3378c1f31601ea42ec2f23b6d65e92a5326974ab7befebd43ed517"
+    },
+    {
+      "path": "src/tree.js",
+      "bytes": 39146,
+      "sha256": "2608bae5b9ac9102054ba7926a2269dc4cd887d44926e13946ef79f858dd6101"
+    },
+    {
+      "path": "src/vendor/MarkerCluster.css",
+      "bytes": 872,
+      "sha256": "614dea0a98ff3f4ead74f04918f6b1d1b9ba435c25b5fc23b21a394d1e3e4d87"
+    },
+    {
+      "path": "src/vendor/elk-LICENSE.txt",
+      "bytes": 14443,
+      "sha256": "637e81f4a1b6b4079535c499fca05e238cf7605c1ff5b76d60d7da7ce96700c9"
+    },
+    {
+      "path": "src/vendor/elk.bundled.js",
+      "bytes": 1609699,
+      "sha256": "6ad8b55e3d85c469e6228212c0512dc49d35217464a70a796162d2a925647ed9"
+    },
+    {
+      "path": "src/vendor/leaflet-LICENSE.txt",
+      "bytes": 1369,
+      "sha256": "bbc959aaef7488b38942e7f05cfd1244351f8bce54261951ea17dd7cf60f894b"
+    },
+    {
+      "path": "src/vendor/leaflet.css",
+      "bytes": 18716,
+      "sha256": "4aeee5916cab477f68cd48a63d948046bf6ab4fb20c2f93df0ffd50066c6eaff"
+    },
+    {
+      "path": "src/vendor/leaflet.js",
+      "bytes": 147517,
+      "sha256": "dc71f8a6880bc3ca1bd9fa8dc5f1af48c702dc510b0a78240a07c5feed7ce935"
+    },
+    {
+      "path": "src/vendor/leaflet.markercluster.js",
+      "bytes": 34087,
+      "sha256": "b1ef34ccee0fb36d856ff4719c759046a0e14293dbbf9d531d969735481168bc"
+    },
+    {
+      "path": "src/vendor/manifest.json",
+      "bytes": 1455,
+      "sha256": "7e52c056f9ff6c97af09874c3790bfe48f26e80ab58d31c2bd2da97100a71d07"
+    },
+    {
+      "path": "src/vendor/markercluster-LICENSE.txt",
+      "bytes": 1052,
+      "sha256": "3133dacd38250bd1f524d8166cc60a016a382522e062fce143691c65bf5e4b3d"
+    },
+    {
+      "path": "src/views.js",
+      "bytes": 75963,
+      "sha256": "aec03c89d19a232908a75dd08fda0b72a969588613db88096beda9218b5fb690"
+    },
+    {
+      "path": "tests/book-couple.test.mjs",
+      "bytes": 1782,
+      "sha256": "ac014c6786ff834f5e9ae2fb1bfcc02082cc40c71b6016ab20f9e5a1287b6318"
+    },
+    {
+      "path": "tests/changes.test.mjs",
+      "bytes": 5472,
+      "sha256": "37baea69bbbc144ec5bf11fde14a177d5516ee95cf4add2dad893dfd471fe379"
+    },
+    {
+      "path": "tests/checks.test.cjs",
+      "bytes": 3267,
+      "sha256": "c9aef27aca020267128a61676755f0fa1dc6b026be841ecba4d20a2522137551"
+    },
+    {
+      "path": "tests/collaboration.test.mjs",
+      "bytes": 7761,
+      "sha256": "276753b8133fd30027e70d9af34d9d2587e067d8b06262d42503ade74b743cae"
+    },
+    {
+      "path": "tests/dna.test.cjs",
+      "bytes": 8100,
+      "sha256": "46b2de988ef178f27c60992157e11d5d27f3207af2624af06c1c970bb536e6d9"
+    },
+    {
+      "path": "tests/editions.test.mjs",
+      "bytes": 3311,
+      "sha256": "a6b46c537e6fc4e6653b2874d7ce658e66ab93fd6bdea076c2fc552c768c815e"
+    },
+    {
+      "path": "tests/family-views.test.cjs",
+      "bytes": 7584,
+      "sha256": "de67465c5fc3ac1153c1943dae63a5ee85e9ad4d94a0b5d281e413e0da43075e"
+    },
+    {
+      "path": "tests/fixtures/full-tree.json",
+      "bytes": 7322,
+      "sha256": "4f66e270ea744cb04833dc3039fa29b834a217f3d09f62eea095f52aa6058b86"
+    },
+    {
+      "path": "tests/fixtures/gedcom-sample.json",
+      "bytes": 8547,
+      "sha256": "64170d8de122f82195184b1a8d513a01273c5c96e3e0f0743de430bd43bdcf08"
+    },
+    {
+      "path": "tests/fixtures/portable-map-data.json",
+      "bytes": 585,
+      "sha256": "af2f5594c7103f543c7bd1d2efb5489c482abbdf9c873127559ebade2031b5f4"
+    },
+    {
+      "path": "tests/fixtures/sample-family/data.json",
+      "bytes": 24319,
+      "sha256": "5cee1a8ba06235ef3c1582df7d7023f2f97653f7f7d796bb930d34e83842ec24"
+    },
+    {
+      "path": "tests/fixtures/sample-family/gazetteer.json",
+      "bytes": 1237,
+      "sha256": "cad3979f25fcf713208e75ce25dc876e89e4660d756fafe3873e3368be99a200"
+    },
+    {
+      "path": "tests/fixtures/sample-family/history-local.json",
+      "bytes": 867,
+      "sha256": "b573b294021e5447ba72fff4980dca9e246ce64202fafbd4674e861873449ca1"
+    },
+    {
+      "path": "tests/fixtures/sample-family/media-notes.json",
+      "bytes": 721,
+      "sha256": "7b510c6718d1755bff53be31b3b6235534a9ca435640eb8af22230243d8e52b8"
+    },
+    {
+      "path": "tests/fixtures/sample-family/registers.json",
+      "bytes": 879,
+      "sha256": "f750a6ae2b0364e5ae3a6358b3bcb8ae71accbc157b0f7a0769732a17300afde"
+    },
+    {
+      "path": "tests/gedcom.test.cjs",
+      "bytes": 16365,
+      "sha256": "cabbb6f3939543b619ea061b241ebd0326989a1bc1607d43ed46b22c5af5529b"
+    },
+    {
+      "path": "tests/init.test.mjs",
+      "bytes": 2646,
+      "sha256": "47a6ee1f90527f1b66cf8136d31bb75f0d15f719f18783a3b20a752a4a41a658"
+    },
+    {
+      "path": "tests/interview-words.test.mjs",
+      "bytes": 1301,
+      "sha256": "f10d310b8452305e74edcb863c9d90704978a04579dff1cfb7cefa248896df69"
+    },
+    {
+      "path": "tests/map.test.cjs",
+      "bytes": 10628,
+      "sha256": "c61bcf337f29e2e3184ba7af208584a7615038ae4d07128531bfb95937d23929"
+    },
+    {
+      "path": "tests/mza-crop.test.cjs",
+      "bytes": 2633,
+      "sha256": "eb0a0ece52a7181c882d8566e4328ae677d10a0410363c0b5e3fa9cc82a6fa47"
+    },
+    {
+      "path": "tests/names.test.cjs",
+      "bytes": 2722,
+      "sha256": "5924e7592239bbe3191f676b6309a28edee2eea54866e456d9416c7ef82dd231"
+    },
+    {
+      "path": "tests/person-choice-labels.test.cjs",
+      "bytes": 3709,
+      "sha256": "86c9aecc57f03e24db1280434863616a72338dafe41ae2680bff0c19db2814c3"
+    },
+    {
+      "path": "tests/png.test.mjs",
+      "bytes": 4753,
+      "sha256": "34e9941762efb19bbe562b1b19a259564cf0141a07596003b0e17417768d51de"
+    },
+    {
+      "path": "tests/publish-pages.test.mjs",
+      "bytes": 1889,
+      "sha256": "a43a08ef56d8e079e7b9b9dfac42800c68bc3611a23f9268da17458b3cdc230a"
+    },
+    {
+      "path": "tests/research-queue.test.cjs",
+      "bytes": 3455,
+      "sha256": "130e541ba1a8afd221a805724ffc093ebdf98d2259123b997f2b957b42a66819"
+    },
+    {
+      "path": "tests/research-views.test.cjs",
+      "bytes": 6701,
+      "sha256": "ec5738a2c3c2c95a02546aa5bc41c2112f36a697a2e47da708bc5279848778cb"
+    },
+    {
+      "path": "tests/sample-build.test.mjs",
+      "bytes": 6857,
+      "sha256": "1dbfef4beac7871354a6958f90f3eead10acc6bbf5702c2b86de1c8eafc64451"
+    },
+    {
+      "path": "tests/sample-companions.test.mjs",
+      "bytes": 1920,
+      "sha256": "fd8ecdf86920a6898b86fa15a5f0456ad2e3dbef67f7aec323de0aa8cbcfb4d7"
+    },
+    {
+      "path": "tests/sample-data.test.cjs",
+      "bytes": 7433,
+      "sha256": "f55d6a5ef25afa1a6507f4bd04c4e6bbf50086547c88432ac5a755751d70a5bc"
+    },
+    {
+      "path": "tests/schema.test.mjs",
+      "bytes": 2867,
+      "sha256": "a5fbaefbe4be9d34c5ed10df21477f2909a2956537253ab6931eb601615749fa"
+    },
+    {
+      "path": "tests/simplify-geo.test.mjs",
+      "bytes": 1175,
+      "sha256": "557e459c5043f94900d647e21996f208ae369ea851ce7604fe23563aa5a534d5"
+    },
+    {
+      "path": "tests/visual/baseline/badatelna-fronta-1400.png",
+      "bytes": 143403,
+      "sha256": "2596454dc50c957a30a2510d3fe1cad6ac9709ab49cf03866517e34b47f6ca13"
+    },
+    {
+      "path": "tests/visual/baseline/badatelna-fronta-375.png",
+      "bytes": 64638,
+      "sha256": "d6e09127ed5715ec44691cce4c68880f4cf3481040a4f24226d04726f67569e2"
+    },
+    {
+      "path": "tests/visual/baseline/badatelna-prepis-1400.png",
+      "bytes": 122860,
+      "sha256": "8d43fce04ca46ddfce35a1930f82541fb39f2e7a477e7ae79cdc839a801060ac"
+    },
+    {
+      "path": "tests/visual/baseline/badatelna-prepis-375.png",
+      "bytes": 66365,
+      "sha256": "e22e9320b03d4972a2d11029f3e91fc0f8eb1a7dfd330eb1d97b8d0b361a896b"
+    },
+    {
+      "path": "tests/visual/baseline/badatelna-zdravi-1400.png",
+      "bytes": 129744,
+      "sha256": "65f05a6a2aa7433007b6a45f2f41c933cbf2b5aa2288a984657a7d77d2f27621"
+    },
+    {
+      "path": "tests/visual/baseline/badatelna-zdravi-375.png",
+      "bytes": 66889,
+      "sha256": "37821e118160e4ada97525dd3df10a864a769d65046b6d18b43bb8297a2859d0"
+    },
+    {
+      "path": "tests/visual/baseline/casova-osa-1400.png",
+      "bytes": 134861,
+      "sha256": "57979f9a1f93472c8616e14b84af678941a15d4c5cf59fd8655f2c373ea094e5"
+    },
+    {
+      "path": "tests/visual/baseline/casova-osa-375.png",
+      "bytes": 60320,
+      "sha256": "d8393d2d1d06b084798fff6250b8f00ca57f294fb1aaf6cfa6036efb0dc3a8df"
+    },
+    {
+      "path": "tests/visual/baseline/casova-osa-zivoty-1400.png",
+      "bytes": 108579,
+      "sha256": "0c8b175922b668164d6366e18e4f301208034fbc5355343f49c6980d42de8220"
+    },
+    {
+      "path": "tests/visual/baseline/casova-osa-zivoty-375.png",
+      "bytes": 46929,
+      "sha256": "a760ca1e2e687fec19a91c33868b2396be6ff8303af8c6aea7b4521fefaccfe4"
+    },
+    {
+      "path": "tests/visual/baseline/mista-1400.png",
+      "bytes": 136192,
+      "sha256": "a0ebf73e9eb256abd4661d71ef76575663e64797b6233de12e0a7e98c879fa04"
+    },
+    {
+      "path": "tests/visual/baseline/mista-375.png",
+      "bytes": 54646,
+      "sha256": "8a8767efd8613331d0694bcc8e9d982f52dda198d5d4d8cade8ee65a1ccc6008"
+    },
+    {
+      "path": "tests/visual/baseline/mista-film-1400.png",
+      "bytes": 109355,
+      "sha256": "225292580edd8d507055fe480079ed5193483d6446207c7cad026b2d87ea2cf7"
+    },
+    {
+      "path": "tests/visual/baseline/mista-film-375.png",
+      "bytes": 61615,
+      "sha256": "f23f4a0204a5a17bcb66c15c3db71efef002991588c80f7101377d553d938d2f"
+    },
+    {
+      "path": "tests/visual/baseline/pramen-fotka-1400.png",
+      "bytes": 114674,
+      "sha256": "d77688ce64ec2e16ed0c27567cee7fdc79f73ffe6f5b0140ec1d3579ac5b3b22"
+    },
+    {
+      "path": "tests/visual/baseline/pramen-fotka-375.png",
+      "bytes": 58708,
+      "sha256": "3149a0b6cecfb21502425e02993c121c3101304b2493dc60c47102ff519e98a5"
+    },
+    {
+      "path": "tests/visual/baseline/prehled-1400.png",
+      "bytes": 105694,
+      "sha256": "592fb06cf379045c58402fc67a3ef251743801d81e0310fe48dd11d354471399"
+    },
+    {
+      "path": "tests/visual/baseline/prehled-375.png",
+      "bytes": 58042,
+      "sha256": "bc3d9fefa34474d0aef9a6905736e397cfdd703a86c22fb530a529215759e1e1"
+    },
+    {
+      "path": "tests/visual/baseline/profil-osoby-1400.png",
+      "bytes": 137738,
+      "sha256": "d234ed59ebcaa3ddd618430e2f7b508f872a26f3e8c8dc42547b00b062fd96bc"
+    },
+    {
+      "path": "tests/visual/baseline/profil-osoby-375.png",
+      "bytes": 41983,
+      "sha256": "8425058dd3f5995fb392a827e161a3791c6b4410f2d9c7b122af02c549b3c7ee"
+    },
+    {
+      "path": "tests/visual/baseline/rodokmen-cely-1400.png",
+      "bytes": 138107,
+      "sha256": "11bcbc62583d5afbff56c773660e73b6212478915b4571148bb7a7ae155738b3"
+    },
+    {
+      "path": "tests/visual/baseline/rodokmen-cely-375.png",
+      "bytes": 67649,
+      "sha256": "8164884c4b7589a510a3f95b6455267cfd8afd283024521117007c2241cb111b"
+    },
+    {
+      "path": "tests/visual/baseline/rodokmen-vyvod-1400.png",
+      "bytes": 161392,
+      "sha256": "dc5a6749f9af81205847de5d98853440be8c7112c6c38eb1de229bba6516e376"
+    },
+    {
+      "path": "tests/visual/baseline/rodokmen-vyvod-375.png",
+      "bytes": 62518,
+      "sha256": "005fd5125cb0768fb12cdc68443c5bb4fd34177e08858804da1a5f0cc878f1ac"
+    },
+    {
+      "path": "tools/mza-crop.js",
+      "bytes": 12934,
+      "sha256": "b6c2ee064f77ed5edca0b2d372c0bfb165bc591be7082c616dfe0d04935caf91"
+    }
+  ],
+  "upstream_verification": {
+    "node_test_all": {
+      "passed_files": 23,
+      "failed_files": 1,
+      "failure": "scripts/visual-test.mjs needs browser but was autodiscovered by node --test"
+    },
+    "source_untouched": true
+  },
+  "derived_asset": "assets/kronika",
+  "modified_paths": [
+    "docs/data-contract.md",
+    "docs/navod.md",
+    "docs/prenos-funkci.md",
+    "docs/pruvodce-vyzkumem.md",
+    "docs/soukromi-a-sdileni.md",
+    "package.json",
+    "scripts/build-audiobook.mjs",
+    "scripts/build-book.mjs",
+    "scripts/build.mjs",
+    "scripts/family-edition.mjs",
+    "scripts/gedcom.mjs",
+    "scripts/import-interview.mjs",
+    "scripts/init.mjs",
+    "scripts/lib/interview-words.mjs",
+    "scripts/lib/light-media.mjs",
+    "scripts/make-clips.mjs",
+    "scripts/protect.mjs",
+    "scripts/questionnaire.mjs",
+    "src/family-views.js",
+    "src/gedcom.js",
+    "src/kinship.js",
+    "src/model.js",
+    "src/presentation.js",
+    "src/research-views.js",
+    "src/story.js",
+    "src/styles.css",
+    "src/tree.js",
+    "src/views.js",
+    "tests/book-couple.test.mjs",
+    "tests/family-views.test.cjs",
+    "tests/gedcom.test.cjs",
+    "tests/map.test.cjs",
+    "tests/sample-build.test.mjs"
+  ],
+  "added_paths": [
+    "docs/third-party-notices.md",
+    "scripts/lib/safe-paths.mjs",
+    "scripts/vejir.mjs",
+    "tests/gedcom-import-regression.test.mjs",
+    "tests/hardening.test.mjs",
+    "tests/parentage-safety.test.cjs",
+    "tests/source-reading.test.mjs",
+    "tests/vejir.test.mjs"
+  ],
+  "patch_verification": {
+    "npm_test": {
+      "passed_files": 28,
+      "failed_files": 0,
+      "declared_scenarios": 156
+    },
+    "targeted_scenarios": {
+      "initial_hardening": 8,
+      "source_reading": 3,
+      "svg_fan": 8,
+      "gedcom_import": 14,
+      "parentage_safety": 11
+    },
+    "default_family_build": true,
+    "research_html_build": true,
+    "book_html_build": true,
+    "svg_cli_xml": true,
+    "gedcom_cli_import_and_dry_run": {
+      "people": 6,
+      "parent_child_relationships": 4,
+      "canonical_dataset_unchanged": true,
+      "original_bytes_sha256_match": true,
+      "reimport_keeps_existing": true
+    },
+    "browser_visual_qa": {
+      "completed": false,
+      "reason": "Local browser blocked; escalated Playwright access to protected runtime rejected by automatic approval review. No bypass attempted."
+    }
+  },
+  "residual_limits": [
+    "family/light are not living-person anonymization",
+    "PDF needs browser; full visual snapshots not run in this audit",
+    "audio synthesis needs local Czech voice (Windows); ffmpeg/Whisper optional and not exercised",
+    "network MZA viewer crop not live-tested",
+    "batch multi-file writes not crash-atomic",
+    "PDF/A conversion not independently veraPDF-validated",
+    "historical context/name reference data retained with upstream sources, not independently fact checked line by line",
+    "GEDCOM export is a projection, not a lossless roundtrip; multiple parental families of one child and mixed or unsupported parentage types are explicitly rejected",
+    "dateText-only timeline events are displayed after exact dates; timeline year filter and lives view use first-year heuristics and do not interpret calendar systems/intervals"
+  ],
+  "not_bundled_paths": [
+    ".claude/skills/kontrola-soukromi/SKILL.md",
+    ".claude/skills/novy-nalez/SKILL.md",
+    ".claude/skills/prvni-spusteni/SKILL.md",
+    ".claude/skills/uvodni-rozhovor/SKILL.md",
+    ".claude/skills/vydani-a-sdileni/SKILL.md",
+    ".claude/skills/zpracuj-rozhovor/SKILL.md",
+    ".gitattributes",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "DESIGN.md",
+    "README.md",
+    "docs/img/hero.html",
+    "docs/img/hero.png",
+    "tests/visual/baseline/badatelna-fronta-1400.png",
+    "tests/visual/baseline/badatelna-fronta-375.png",
+    "tests/visual/baseline/badatelna-prepis-1400.png",
+    "tests/visual/baseline/badatelna-prepis-375.png",
+    "tests/visual/baseline/badatelna-zdravi-1400.png",
+    "tests/visual/baseline/badatelna-zdravi-375.png",
+    "tests/visual/baseline/casova-osa-1400.png",
+    "tests/visual/baseline/casova-osa-375.png",
+    "tests/visual/baseline/casova-osa-zivoty-1400.png",
+    "tests/visual/baseline/casova-osa-zivoty-375.png",
+    "tests/visual/baseline/mista-1400.png",
+    "tests/visual/baseline/mista-375.png",
+    "tests/visual/baseline/mista-film-1400.png",
+    "tests/visual/baseline/mista-film-375.png",
+    "tests/visual/baseline/pramen-fotka-1400.png",
+    "tests/visual/baseline/pramen-fotka-375.png",
+    "tests/visual/baseline/prehled-1400.png",
+    "tests/visual/baseline/prehled-375.png",
+    "tests/visual/baseline/profil-osoby-1400.png",
+    "tests/visual/baseline/profil-osoby-375.png",
+    "tests/visual/baseline/rodokmen-cely-1400.png",
+    "tests/visual/baseline/rodokmen-cely-375.png",
+    "tests/visual/baseline/rodokmen-vyvod-1400.png",
+    "tests/visual/baseline/rodokmen-vyvod-375.png"
+  ],
+  "final_file_manifest": "references/kronika-files.json"
+}

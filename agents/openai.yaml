@@ -1,0 +1,14 @@
+interface:
+  display_name: Rodová paměť
+  short_description: Rodokmen, prameny a příběhy rodiny na jednom místě
+  default_prompt: Použij $rodova-pamet k dohledání předků, ověření pramenů a vytvoření
+    rodinné kroniky.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

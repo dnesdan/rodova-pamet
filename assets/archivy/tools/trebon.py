@@ -1,0 +1,195 @@
+#!/usr/bin/env python3
+"""Matriky SOA Třeboň (digi.ceskearchivy.cz) bez prohlížeče.
+
+Použití (z kořene projektu):
+  trebon.py misto "Obec"                 -> id místa a jeho název (diakritiku a mezery nástroj odstraní sám; portál vybere
+                                            jedno místo – VŽDY zkontroluj vypsaný název a okres, u stejnojmenných obcí
+                                            a měst vrací i okres nebo synagogu; pak použij id přímo)
+  trebon.py svazky <id_mista|"Obec">     -> seznam matrik: id_knihy | kniha | druh | roky | obce
+  trebon.py rejstrik <id_knihy> <písmeno> -> jmenný rejstřík (dobrovolnický): příjmení | jméno | místo | rok | snímek
+                                            (ne každá kniha ho má; prázdný výsledek je neprůkazný: může chybět rejstřík nebo selhat parser)
+  trebon.py snimek <id_knihy> <snímek> <vystup.jpg> [nahled]
+                                         -> stáhne snímek v plném rozlišení (slepí dlaždice); "nahled" = 1/4 rozlišení
+  trebon.py svazek <id_knihy>            -> vypíše katalogový kandidát jako JSON (bez zápisu do dat) (klíč trebon_<id_knihy>)
+Trvalý odkaz na snímek: https://digi.ceskearchivy.cz/<id_knihy>/<snímek>
+Ber ohled na server: stahuj jen snímky, které čteš.
+"""
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__))); import slusne
+from archive_common import project_root, emit_catalog, safe_key, project_file, atomic_json
+import glob, html, json, os, re, shutil, subprocess, sys, tempfile, unicodedata, urllib.parse, urllib.request, http.cookiejar
+for _s in (sys.stdout, sys.stderr):   # UTF-8 výstup i na Windows bez -X utf8 (cp1250 neumí třeba „→“)
+    if hasattr(_s, "reconfigure"):
+        _s.reconfigure(encoding="utf-8", errors="replace")
+
+BASE = "https://digi.ceskearchivy.cz"
+ROOT = project_root()
+
+
+def magick():
+    """Cesta k ImageMagicku; když chybí, skončí hned (před stahováním) srozumitelnou hláškou."""
+    m = (shutil.which("magick") or next(iter(sorted(glob.glob(r"C:\Program Files\ImageMagick*\magick.exe"))), None)
+         or (os.name != "nt" and shutil.which("convert")))   # ImageMagick 6 bez magick; na Windows je convert.exe jiný program
+    if not m:
+        sys.exit("Chybí ImageMagick (příkaz magick). Nainstaluj ho (macOS: brew install imagemagick, "
+                 "Windows: winget install ImageMagick.ImageMagick a restart agenta) a spusť nástroj znovu.")
+    return m
+_cj = http.cookiejar.CookieJar()
+_op = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(_cj))
+_op.addheaders = [("User-Agent", "Mozilla/5.0 (rodokmen)")]
+
+
+def get(path, referer=None, binary=False):
+    url = path if path.startswith("http") else BASE + path
+    req = urllib.request.Request(url)
+    if referer:
+        req.add_header("Referer", referer)
+    for attempt in range(4):
+        try:
+            with _op.open(req, timeout=90) as r:
+                data = r.read()
+                return (data, r.geturl()) if binary else (data.decode("utf-8", "replace"), r.geturl())
+        except OSError:
+            if attempt == 3:
+                raise
+
+
+def text(s):
+    return html.unescape(re.sub(r"<[^>]+>", " ", s)).replace("\xa0", " ").strip()
+
+
+def misto(nazev):
+    # portál zná jen tvar bez diakritiky a mezer (Ratibořské Hory → RatiborskeHory), jinak vrací 404
+    holy = "".join(c for c in unicodedata.normalize("NFKD", nazev) if not unicodedata.combining(c)).replace(" ", "")
+    _, url = get("/" + urllib.parse.quote(holy))
+    m = re.search(r"[?&]id=(\d+)", url) or re.search(r"/(\d+)-", url)
+    if not m:
+        sys.exit(f"místo „{nazev}“ nenalezeno – portál ho jako místo nezná (malé osady chybějí). Zkus farní nebo sousední obec\n"
+                 f"(Malá Chyška → Chyšky) a v popisu jejích knih najdi tuto osadu; id knihy jinak najdi na portálu v prohlížeči.")
+    pid = m.group(1)
+    page, _ = get(f"/pages/klicova/rejinfo.php?typ=&id={pid}&l=&bookid=")
+    t = re.search(r"document\.title=\"([^\"]*)\"", page)
+    if not t:
+        page, _ = get(f"/description.php?id={pid}&menu=4")
+        t = re.search(r"document\.title=\"([^\"]*)\"", page)
+    return pid, (t.group(1).strip() if t else "")
+
+
+def svazky(arg):
+    pid = arg if arg.isdigit() else misto(arg)[0]
+    page, _ = get(f"/pages/klicova/klicmaterial1.php?typ=2&id={pid}&pomid={pid}&l=&bookid=")
+    out = []
+    for m in re.finditer(r"<tr[^>]*onclick=\"otevri\('menu=3&id=(\d+)'\)\">(.*?)</tr>", page, re.S):
+        bid, row = m.group(1), m.group(2)
+        cells = [text(c) for c in re.findall(r"<td[^>]*>(.*?)</td>", row, re.S)]
+        cells = [re.sub(r"\s+", " ", c) for c in cells]
+        out.append((bid, cells))
+    return out
+
+
+def rejstrik(bid, pis):
+    page, _ = get(f"/pages/indexes.php?druh=1&menu2=0&pis={urllib.parse.quote(pis)}&id={bid}&page=")
+    rows = []
+    for m in re.finditer(r"<tr id='\d+' onclick=\"otevri2\('[^']*page=(\d+)[^']*'\)\">(.*?)</tr>", page, re.S):
+        cells = [text(c) for c in re.findall(r"<td[^>]*>(.*?)</td>", m.group(2), re.S)]
+        rows.append(cells + [m.group(1)])
+    return rows
+
+
+def _print_rejstrik(rows):
+    if not rows:
+        print("Rejstřík nic nevrátil; prázdný výsledek není důkaz, že jméno chybí.")
+    for row in rows:
+        print(" | ".join(row[:2] + row[3:]))
+
+
+def _compose_tiles(tile_rows, out, tmp, magick_cmd):
+    rows = []
+    for y, tiles in enumerate(tile_rows):
+        row_path = os.path.join(tmp, f"row_{y}.png")
+        subprocess.run([magick_cmd, *tiles, "-gravity", "northwest", "+append", row_path], check=True)
+        rows.append(row_path)
+    subprocess.run([magick_cmd, *rows, "-gravity", "northwest", "-append", out], check=True)
+
+
+def snimek(bid, n, out, nahled=False):
+    import cache
+    safe_key(str(bid))
+    if not str(n).isdigit() or int(n)<1: raise ValueError("Snímek musí být kladné číslo.")
+    key=f"trebon/{bid}/sn{int(n):04d}{'-nahled' if nahled else ''}.jpg"
+    cache.soubor(key,out,lambda target: _download(bid,n,target,nahled))
+    print(out,"odkaz:",f"{BASE}/{bid}/{n}")
+
+
+def _download(bid, n, out, nahled=False):
+    MAGICK = magick()
+    ref = f"{BASE}/{bid}/{n}"
+    get(ref)
+    page, _ = get(f"/view.php?menu=3&id={bid}&page={n}&r=0", referer=ref)
+    m = re.search(r'showImage\("[^"]*","([^"]+)"', page)
+    if not m:
+        sys.exit("token obrázku nenalezen (snímek neexistuje?)")
+    src = f"{BASE}/cgi-bin/isrv8.cgi?{m.group(1)}"
+    # najdi nejvyšší úroveň a počet dlaždic
+    def tile(t, x, y):
+        d, _ = get(f"{src}.0.{t}-{x}-{y}", referer=ref, binary=True)
+        return d
+    tier = 1
+    while tier < 20 and tile(tier + 1, 0, 0):
+        tier += 1
+    if tier == 20: raise ValueError("Neplatná obrazová pyramida (více než 20 úrovní).")
+    if nahled:
+        tier = max(1, tier - 2)
+    tmp = tempfile.mkdtemp(prefix="trebon_")
+    tile_rows, y = [], 0
+    try:
+        while y < 200:
+            x, row = 0, []
+            while x < 200:
+                d = tile(tier, x, y)
+                if not d:
+                    break
+                p = os.path.join(tmp, f"t_{y}_{x}.jpg")
+                with open(p, "wb") as f:
+                    f.write(d)
+                row.append(p)
+                x += 1
+            if not row:
+                break
+            tile_rows.append(row)
+            y += 1
+        if y >= 200 or x >= 200: raise ValueError("Neplatné nebo nadměrné rozměry dlaždic.")
+        if not tile_rows: raise ValueError("Portál nevrátil žádné obrazové dlaždice.")
+        _compose_tiles(tile_rows, out, tmp, MAGICK)
+    finally:
+        shutil.rmtree(tmp)
+    r = subprocess.run([MAGICK, out + "[0]", "-format", "%wx%h", "info:"], capture_output=True, text=True, check=True)
+    print(out, r.stdout, "odkaz:", ref)
+
+
+def svazek(bid):
+    page, _ = get(f"/{bid}/1")
+    t = re.search(r"document\.title=\"([^\"]*)\"", page) or re.search(r"<title>([^<]*)", page)
+    nazev = t.group(1).strip() if t else f"kniha {bid}"
+    if "DigiArchiv" in nazev:
+        nazev = f"kniha {bid} (název doplň ručně)"
+    emit_catalog(f"trebon_{bid}", {"archiv":"SOA Třeboň (fond ověř z katalogu)","portal":"digi.ceskearchivy.cz",
+        "svazek":nazev,"popis":"","url":f"{BASE}/{bid}"})
+
+
+if __name__ == "__main__":
+    a = sys.argv[1:]
+    if not a:
+        sys.exit(__doc__)
+    if a[0] == "misto":
+        print(*misto(a[1]), sep=" | ")
+    elif a[0] == "svazky":
+        for bid, c in svazky(a[1]):
+            print(bid, "|", " | ".join(x[:300] for x in c if x))
+    elif a[0] == "rejstrik":
+        _print_rejstrik(rejstrik(a[1], a[2]))
+    elif a[0] == "snimek":
+        snimek(a[1], a[2], a[3], len(a) > 4)
+    elif a[0] == "svazek":
+        svazek(a[1])
+    else:
+        sys.exit(__doc__)
